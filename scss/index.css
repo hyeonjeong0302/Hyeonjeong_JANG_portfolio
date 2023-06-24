@@ -301,7 +301,7 @@ font-family: "Font Awesome 5 Free";
   float: left;
 }
 .home_page .readme .btn_ex_wrap .btn_ex a .resume_btn {
-  margin-right: 16px;
+  margin-right: 18px;
   position: relative;
   border: 5px solid #7ED957;
   border-radius: 15px;
@@ -382,6 +382,7 @@ font-family: "Font Awesome 5 Free";
 .footer .today {
   font-size: 15px;
 }
+
 .quick {
   position: fixed;
   bottom: 50px;

@@ -27,17 +27,6 @@
 // }}
 
 //다크모드
-
-// const count = 0;
-// const mode =  document.getElementById("mode");
-// document.querySelector(".header_right .theme").addEventListener("click", function(){
-//   count += 1;
-//   if(count % 2 == 1){
-//     mode.classList.add("dark_mode");
-//   } else{
-//     mode.classList.remove("dark_mode");
-//   }
-// });
 let count = 0;
 const mode = document.getElementById("mode");
 document.querySelector(".header_right .theme").addEventListener("click", function () {
@@ -48,3 +37,5 @@ document.querySelector(".header_right .theme").addEventListener("click", functio
     mode.classList.remove("dark_mode");
   }
 });
+
+

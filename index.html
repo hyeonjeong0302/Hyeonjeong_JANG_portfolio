@@ -18,11 +18,54 @@
   <!-- js 연결 -->
   <script src="./js/index.js" defer></script>
   <script src="./js/modal.js" defer></script>
-<script src="js/common.js" defer></script>
+  <script src="js/common.js" defer></script>
 
 </head>
 
 <body class="mode" id="mode">
+  <!-- 채널톡 -->
+  <script>
+    (function () {
+      var w = window;
+      if (w.ChannelIO) {
+        return w.console.error("ChannelIO script included twice.");
+      }
+      var ch = function () {
+        ch.c(arguments);
+      };
+      ch.q = [];
+      ch.c = function (args) {
+        ch.q.push(args);
+      };
+      w.ChannelIO = ch;
+
+      function l() {
+        if (w.ChannelIOInitialized) {
+          return;
+        }
+        w.ChannelIOInitialized = true;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+        var x = document.getElementsByTagName("script")[0];
+        if (x.parentNode) {
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+      if (document.readyState === "complete") {
+        l();
+      } else {
+        w.addEventListener("DOMContentLoaded", l);
+        w.addEventListener("load", l);
+      }
+    })();
+
+    ChannelIO('boot', {
+      "pluginKey": "01ae968f-253d-4e6a-977a-94fdae47d3cb"
+    });
+  </script>
+
   <!-- modal -->
   <div class="contact_modal" id="contactModal">
     <div><img src="./images/favicon_color.png" alt="icon">
@@ -34,7 +77,8 @@
     </div>
     <div>
       <p>전화번호. <a href="tel:010-2769-8932">010-2769-8932</a></p>
-      <p>Email. <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wkdguswjd7@gmail.com"target="_blank">wkdguswjd7@gmail.com</a></p>
+      <p>Email. <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hyeonjeong.jang.0302@gmail.com"
+          target="_blank">hyeonjeong.jang.0302@gmail.com</a></p>
     </div>
     <button class="chat_btn">
       채팅으로 연락하기
@@ -67,10 +111,10 @@
     <div class="gnb">
       <ul>
         <li><a href="./index.html" id="home_btn">Home</a></li>
-        <li><a href="./portfolio.html"  id="portfolio_btn">Portfolio</a></li>
-        <li><a href="./resume.html"  id="resume_btn">Resume</a></li>
+        <li><a href="./portfolio.html" id="portfolio_btn">Portfolio</a></li>
+        <li><a href="./resume.html" id="resume_btn">Resume</a></li>
         <li><a href="https://github.com/hyeonjeong0302"
-          onclick="window.open(this.href, '_blank'); return false;">GitHub</a></li>
+            onclick="window.open(this.href, '_blank'); return false;">GitHub</a></li>
       </ul>
     </div>
     <div class="header_right">
@@ -90,72 +134,99 @@
     </div>
   </header>
   <!-- header -->
-<div class="home_page" id="">
-  <div class="wrap">
+  <div class="home_page" id="">
+    <div class="wrap">
 
-    <div class="introduce">
-      <h1>장현정</h1>
-      <div>
-        <img src="./images/favicon_color.png" alt="icon">
-        <h2>Web Frontend Developer</h2>
-      </div>
-      <div class="profile_image"><img src="" alt="profile_image"></div>
-      <div class="introduce_text">
-        <p>안녕하세요. 웹 프론트엔드 개발자 장현정입니다. <br />
-          새로 배우는 것을 좋아하며 집요하게 파고들어 내 것으로 만들고자 항상 노력하고 있습니다.
-        </p>
-      </div>
-    </div>
-    <!--introduce-->
-    <div class="readme">
-      <h1>README</h1>
-      <div class="btn_ex_wrap">
-        <div class="btn_ex">
-          <a href="./resume.html" target="_blank">
-            <div class="resume_btn">Resume
-              <img src="./images/icon_github.png" alt="icon_github">
-              <img src="./images/icon_javascript.png" alt="icon_javascript">
-            </div>
-          </a>
-          <p>이력서를 보려면 <br />
-            <b class="resume_mini">Resume</b>를 클릭해 주세요.</p>
-        </div>
-        <div class="btn_ex">
-          <a href="./portfolio.html" target="_blank">
-            <div class="portfolio_btn">Portfolio
-              <img src="./images/icon_react.png" alt="icon_react">
-            </div>
-          </a>
-          <p>포트폴리오를 보려면 <br />
-            <b class="portfolio_mini">Portfolio</b>를 클릭해 주세요.</p>
-        </div>
-      </div>
-      <div class="btn_desc">
+      <div class="introduce">
+        <h1>장현정</h1>
         <div>
           <img src="./images/favicon_color.png" alt="icon">
+          <h2>Web Frontend Developer</h2>
         </div>
-        <p><b class="resume_mini">Resume</b>에는 프론트엔드 개발과 관련한 핵심적인 내용만 간결하게 작성되어 있습니다. <br />
-          이력서를 다운받으시려면 <b class="resume_download"><a href="./downloed/ilkwang_ppt.pptx" download="">이력서 다운로드</a></b>를 눌러주세요.</p>
-      </div>
-      <div class="btn_desc">
-        <div>
-          <img src="./images/favicon_color.png" alt="icon">
+        <div class="profile_image"><img src="" alt="profile_image"></div>
+        <div class="introduce_text">
+          <p>안녕하세요. 웹 프론트엔드 개발자 장현정입니다. <br />
+            새로 배우는 것을 좋아하며 집요하게 파고들어 내 것으로 만들고자 항상 노력하고 있습니다.
+          </p>
         </div>
-        <p><b class="portfolio_mini">Portfolio</b>에는 다양한 활동과 프로젝트들이 작성되어 있습니다.</p>
       </div>
+      <!--introduce-->
+      <div class="readme">
+        <h1>README</h1>
+        <div class="btn_ex_wrap">
+          <div class="btn_ex">
+            <a href="./resume.html" target="_blank">
+              <div class="resume_btn">Resume
+                <img src="./images/icon_github.png" alt="icon_github">
+                <img src="./images/icon_javascript.png" alt="icon_javascript">
+              </div>
+            </a>
+            <p>이력서를 보려면 <br />
+              <b class="resume_mini">Resume</b>를 클릭해 주세요.</p>
+          </div>
+          <div class="btn_ex">
+            <a href="./portfolio.html" target="_blank">
+              <div class="portfolio_btn">Portfolio
+                <img src="./images/icon_react.png" alt="icon_react">
+              </div>
+            </a>
+            <p>포트폴리오를 보려면 <br />
+              <b class="portfolio_mini">Portfolio</b>를 클릭해 주세요.</p>
+          </div>
+        </div>
+        <div class="btn_desc">
+          <div>
+            <img src="./images/favicon_color.png" alt="icon">
+          </div>
+          <p><b class="resume_mini">Resume</b>에는 프론트엔드 개발과 관련한 핵심적인 내용만 간결하게 작성되어 있습니다. <br />
+            이력서를 다운받으시려면 <b class="resume_download"><a href="./downloed/ilkwang_ppt.pptx" download="">이력서 다운로드</a></b>를
+            눌러주세요.</p>
+        </div>
+        <div class="btn_desc">
+          <div>
+            <img src="./images/favicon_color.png" alt="icon">
+          </div>
+          <p><b class="portfolio_mini">Portfolio</b>에는 다양한 활동과 프로젝트들이 작성되어 있습니다.</p>
+        </div>
+      </div>
+      <!--readme-->
+      <footer class="footer">
+        <script>
+          expireDate = new Date
+          expireDate.setMonth(expireDate.getMonth() + 3)
+          hitCt = eval(cookieVal("pageHit"))
+          hitCt++
+          document.cookie = "pageHit=" + hitCt + ";expires=" + expireDate.toGMTString()
+
+          function cookieVal(cookieName) {
+            thisCookie = document.cookie.split("; ")
+            for (i = 0; i < thisCookie.length; i++) {
+              if (cookieName == thisCookie[i].split("=")[0]) {
+                return thisCookie[i].split("=")[1]
+              }
+            }
+            return 0
+          }
+        </script>
+        <div class="today">
+          <p align=center>
+            <script language="javascript" type="text/javascript">
+              document.write("Today " + hitCt)
+            </script>
+          </p>
+        </div>
+      </footer>
+      
+      <div class="quick">
+        <div class="contact_btn" id="contactBtn"><a href="#!"><i class="fal fa-comments"></i></div>
+        <div class="top_btn"><a href="#">TOP</a></div>
+      </div>
+      <!--quick-->
     </div>
-    <!--readme-->
-    <footer class="footer">
-      <div class="today">Today <b class="today_count">1</b></div>
-    </footer>
-    <div class="quick">
-      <div class="contact_btn" id="contactBtn"><a href="#!"><i class="fal fa-comments"></i></div>
-      <div class="top_btn"><a href="#">TOP</a></div>
-    </div>
-    <!--quick-->
+    <!--wrap-->
   </div>
-  <!--wrap-->
-</div><!--home_page-->
+  <!--home_page-->
+
 </body>
 
 </html>

@@ -1,157 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
-
-* {
-  box-sizing:border-box;
-}
-body {
-  background:#ddd;
-  font-family:"Raleway";
-}
-.tabs {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:680px;
-  height:360px;
-  padding:30px 20px;
-  background:#f5f5f5;
-  box-shadow:5px 5px 10px 5px #ccc;
-  overflow:hidden;
-}
-.tabs .tab-header {
-  float:left;
-  width:180px;
-  height:100%;
-  border-right:1px solid #ccc;
-  padding:50px 0px;
-}
-.tabs .tab-header > div {
-  height:50px;
-  line-height:50px;
-  font-size:16px;
-  font-weight:600;
-  color:#888;
-  cursor:pointer;
-  padding-left:10px;
-}
-.tabs .tab-header > div:hover,
-.tabs .tab-header > div.active {
-  color:#00acee;
-}
-.tabs .tab-header div i {
-  display:inline-block;
-  margin-left:10px;
-  margin-right:5px;
-}
-.tabs .tab-content {
-  position:relative;
-  height:100%;
-  overflow:hidden;
-}
-.tabs .tab-content > div > i {
-  display:inline-block;
-  width:50px;
-  height:50px;
-  background:#555;
-  color:#f5f5f5;
-  font-size:25px;
-  font-weight:600;
-  text-align:center;
-  line-height:50px;
-  border-radius:50%;
-}
-.tabs .tab-content > div {
-  position:absolute;
-  text-align:center;
-  padding:40px 20px;
-  top:-200%;
-  transition:all 500ms ease-in-out;
-}
-.tabs .tab-content > div.active {
-  top:0px;
-}
-
-.tabs .tab-indicator {
-  position:absolute;
-  width:4px;
-  height:50px;
-  background:#00acee;
-  left:198px;
-  top:80px;
-  transition:all 500ms ease-in-out;
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-  <div class="tabs">
-    <div class="tab-header">
-      <div class="active">
-        <i class="fa fa-code"></i> Main Page
-      </div>
-      <div>
-        <i class="fa fa-pencil-square"></i> Sub Page
-      </div>
-      <div>
-        <i class="fa fa-bar-chart"></i> Detail Page
-      </div>
-      <div>
-        <i class="fa fa-envelope"></i> Contact
-      </div>
-    </div>
-    <div class="tab-indicator"></div>
-    <div class="tab-content">
-      
-      <div class="active">
-     <div class="view_code_btn"><a href="#!">코드보기</a></div>
-     <div class="github_btn"><a href="#!">코드보기</a>Github</div>
-     <div class="product_btn"><a href="#!">일광전구</a></div>
-      </div>
-      
-      <div>
-     <video src=""></video>
-      </div>
-      
-      <div>
-       <video src=""></video>
-      </div>
-      
-      <div>
-        <video src=""></video>
-      </div>
-      
-    </div>
-  </div>
-  
-  <script>
-function _class(name){
-  return document.getElementsByClassName(name);
-}
-
-let tabPanes = _class("tab-header")[0].getElementsByTagName("div");
-
-for(let i=0;i<tabPanes.length;i++){
-  tabPanes[i].addEventListener("click",function(){
-    _class("tab-header")[0].getElementsByClassName("active")[0].classList.remove("active");
-    tabPanes[i].classList.add("active");
-    
-    _class("tab-indicator")[0].style.top = `calc(80px + ${i*50}px)`;
-    
-    _class("tab-content")[0].getElementsByClassName("active")[0].classList.remove("active");
-    _class("tab-content")[0].getElementsByTagName("div")[i].classList.add("active");
-    
-  });
-}
-  </script>
-</body>
-
+    <script language="JavaScript">  
+        expireDate = new Date  // 현재의 날짜 객체를 생성 
+        expireDate.setMonth(expireDate.getMonth()+3)  // 현재 월에 3개월을 더함. 쿠키의 유효기간 설정.(현재~3개월) 
+        hitCt = eval(cookieVal("pageHit"))  // 방문 카운트 변수이며 cookieVal 함수를 실행. 
+        hitCt++  // 방문 카운트 +1
+        document.cookie = "pageHit="+hitCt+";expires=" + expireDate.toGMTString() // 이곳에서 쿠키를 갱신.   
+        function cookieVal(cookieName) {  // cookieVal 함수를 선언함.   
+           thisCookie = document.cookie.split("; ")  // 쿠키의 문자열 구조가 '쿠키명=쿠키값; expires=유효기간' 이기 때문에 먼저 세미콜론(;)으로 나눔.(split) 
+           for (i=0; i<thisCookie.length; i++) { // ; 으로 나눈 만큼 반복문을 실행. 여기서는 2번을 반복함.   
+                if (cookieName == thisCookie[i].split("=")[0]) {  // 먼저 thisCookie[i].split("=")[0]은 '쿠키명=쿠키값' 구조에서 =으로 나눈 배열의 첫번째 값을 지칭함(쿠키명). 
+                     return thisCookie[i].split("=")[1]  // thisCookie[i].split("=")[1] 은 =으로 나눈 배열의 두번째 값.(쿠키값) 
+               }   
+         }   
+         return 0   
+        }   
+        </script>     
+<h3 align=center>  
+<script language="javascript" type="text/javascript">  
+    document.write("Today" + hitCt + "</font> 번째 방문자입니다!")  
+</script>  
+</h3> 
+</body> 
 </html>

@@ -20,6 +20,15 @@
 </head>
 
 <body class="mode" id="mode">
+
+  <!-- 채널톡 -->
+  <script>
+    (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
+  
+    ChannelIO('boot', {
+      "pluginKey": "01ae968f-253d-4e6a-977a-94fdae47d3cb"
+    });
+  </script>
   <!-- modal -->
   <div class="contact_modal" id="contactModal">
     <div><img src="./images/favicon_color.png" alt="icon">
@@ -30,8 +39,8 @@
         연락주시면 최대한 빨리 답장드리겠습니다.</p>
     </div>
     <div>
-      <p>전화번호. 010-2769-8932</p>
-      <p>Email. <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wkdguswjd7@gmail.com"target="_blank">wkdguswjd7@gmail.com</a></p>
+      <p>전화번호. <a href="tel:010-2769-8932">010-2769-8932</a></p>
+      <p>Email. <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hyeonjeong.jang.0302@gmail.com"target="_blank">hyeonjeong.jang.0302@gmail.com</a></p>
     </div>
     <button class="chat_btn">
       채팅으로 연락하기
@@ -90,7 +99,7 @@
   <div class="wrap">
     <div class="resume_contact">
       <div class="resume_contact_title">
-        <span>장현정</span><span class="bar">.</span><span>Resume</span><span class="download_resume">이력서 다운로드</span>
+        <span>장현정</span><span class="bar">.</span><span>Resume</span><span class="download_resume"><a href="./downloed/ilkwang_ppt.pptx">이력서 다운로드</a></span>
       </div>
       <!--resume_contact_title-->
       <div class="resume_contact_detail">
@@ -102,8 +111,8 @@
               <h3>Contact</h3> <img src="./images/favicon_color.png" alt="">
             </div>
             <!-- 이메일 주소 누르면 메일보내기 창 뜨게 만들기 -->
-            <p>Email. <b><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wkdguswjd7@gmail.com"target="_blank">wkdguswjd7@gmail.com</a></b></p>
-            <p>Phone. <b>010-2769-8932</b></p>
+            <p>Email. <b><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hyeonjeong.jang.0302@gmail.com"target="_blank">hyeonjeong.jang.0302@gmail.com</a></b></p>
+            <p>Phone. <b><a href="tel:010-2769-8932">010-2769-8932</a></b></p>
           </div>
           <!--text_contact-->
           <div class="text_channel">
@@ -111,8 +120,8 @@
               <h3>Channel</h3> <img src="./images/favicon_color.png" alt="">
             </div>
             <p>GitHub. <b>github.com</b></p>
-            <p>Portfolio. <b>djWjrnwjWjrn.con-메종</b></p>
-            <p>Portfolio. <b>djWjrnwjWjrn.con-일광</b></p>
+            <p>Project. <b>djWjrnwjWjrn.con-메종</b></p>
+            <p>Project. <b>djWjrnwjWjrn.con-일광</b></p>
           </div>
           <!--text_channel-->
         </div>
@@ -280,7 +289,7 @@
       <!--each_skill-->
 
       <div class="each_skill parcel_bundler">
-        <div class="skill_name"><img src="./images/icon_parcel_bundler.jpg" alt=""><p>Paecel Bundler</p></div>
+        <div class="skill_name"><img src="./images/icon_parcel_bundler.png" alt=""><p>Paecel Bundler</p></div>
         <div class="progress_bar">
           <div class="progress"data-percent="80"> </div>
         </div>
@@ -308,9 +317,36 @@
       <!--education-->
     </div>
     <!--education_ex-->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="today">Today <b class="today_count">1</b></div>
+    </footer> -->
+    <footer class="footer">
+      <script>
+        expireDate = new Date
+        expireDate.setMonth(expireDate.getMonth() + 3)
+        hitCt = eval(cookieVal("pageHit"))
+        hitCt++
+        document.cookie = "pageHit=" + hitCt + ";expires=" + expireDate.toGMTString()
+
+        function cookieVal(cookieName) {
+          thisCookie = document.cookie.split("; ")
+          for (i = 0; i < thisCookie.length; i++) {
+            if (cookieName == thisCookie[i].split("=")[0]) {
+              return thisCookie[i].split("=")[1]
+            }
+          }
+          return 0
+        }
+      </script>
+      <div class="today">
+        <p align=center>
+          <script language="javascript" type="text/javascript">
+            document.write("Today " + hitCt)
+          </script>
+        </p>
+      </div>
     </footer>
+    
     <div class="quick">
       <div class="contact_btn"><a href="#!"><i class="fal fa-comments"></i></div>
       <div class="top_btn"><a href="#">TOP</a></div>

@@ -290,6 +290,7 @@ color: orange
       .download_resume {
         font-size: 15px;
         margin-left: 10px;
+        a:hover{text-decoration: underline;}
       }
     }
 
@@ -602,13 +603,13 @@ color: orange
 text-align: center;
         .school {
           width: 175px; 
-          border-right: 2px solid #eee;
+          border-right: 2px solid #aeaeae;
           box-sizing: border-box;
         }
 
         .span {
           width: 275px;
-          border-right: 2px solid #eee;
+          border-right: 2px solid #aeaeae;
           box-sizing: border-box;
         }
 

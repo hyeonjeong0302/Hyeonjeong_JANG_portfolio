@@ -253,6 +253,9 @@ a {
   font-size: 15px;
   margin-left: 10px;
 }
+.wrap .resume_contact .resume_contact_title .download_resume a:hover {
+  text-decoration: underline;
+}
 .wrap .resume_contact .resume_contact_detail {
   overflow: hidden;
   margin-top: 20px;
@@ -510,12 +513,12 @@ a {
 }
 .wrap .education_ex .education .each_education .school {
   width: 175px;
-  border-right: 2px solid #eee;
+  border-right: 2px solid #aeaeae;
   box-sizing: border-box;
 }
 .wrap .education_ex .education .each_education .span {
   width: 275px;
-  border-right: 2px solid #eee;
+  border-right: 2px solid #aeaeae;
   box-sizing: border-box;
 }
 .wrap .education_ex .education .each_education .major {
