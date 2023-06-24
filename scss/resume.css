@@ -1,0 +1,560 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0 auto;
+  font-family: "Noto Sans KR";
+}
+
+.dark_mode {
+  background-color: rgb(0, 0, 0);
+  color: #aeaeae;
+}
+.dark_mode .header {
+  background-color: black;
+}
+.dark_mode .header .gnb ul li a {
+  color: #aeaeae;
+}
+.dark_mode .header .header_right .search a i {
+  color: #aeaeae;
+}
+.dark_mode .header .theme a {
+  color: gold;
+}
+.dark_mode .header .theme a .day {
+  display: none;
+}
+.dark_mode .header .theme a .night {
+  display: block;
+}
+.dark_mode .resume_btn, .dark_mode .portfolio_btn {
+  color: #aeaeae;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrap {
+  width: 710px;
+  margin: 0 auto;
+  margin-top: 90px;
+}
+
+/*
+플러스 아이콘
+<i class="far fa-times"></i>
+ content: "\f00d"; 
+ font-weight: 400;
+ font-family: "Font Awesome 5 Free";
+
+ 채팅 아이콘
+ <i class="fal fa-comments"></i>
+ content: "\f086";
+ font-weight: 300;
+ font-family: "Font Awesome 5 Free";
+ */
+.contact_modal {
+  display: none;
+  padding: 15px;
+  position: fixed;
+  z-index: 100;
+  bottom: 105px;
+  right: 0px;
+  width: 373px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+}
+.contact_modal div {
+  margin-bottom: 10px;
+}
+.contact_modal div:nth-child(1) {
+  position: relative;
+}
+.contact_modal div:nth-child(1) img {
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.contact_modal div:nth-child(1) h1 {
+  font-size: 25px;
+}
+.contact_modal div:nth-child(1) i {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  content: "\f00d";
+  font-weight: 700;
+  font-family: "Font Awesome 5 Free";
+  cursor: pointer;
+}
+.contact_modal div:nth-child(2) p {
+  line-height: 28px;
+}
+.contact_modal div:nth-child(3) p {
+  line-height: 35px;
+}
+.contact_modal .chat_btn {
+  margin-top: 15px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 2px solid rgb(6, 85, 6);
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+}
+.contact_modal .chat_btn:hover {
+  font-weight: bold;
+}
+
+.search_modal_ex {
+  display: none;
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.search_modal_ex .search_modal {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 600px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 7px;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-weight: bold;
+}
+.search_modal_ex .search_modal .search_input {
+  position: relative;
+  padding: 20px;
+  border-bottom: 1px solid #000;
+}
+.search_modal_ex .search_modal .search_input input {
+  border: none;
+}
+.search_modal_ex .search_modal .search_input input:focus {
+  outline: none;
+}
+.search_modal_ex .search_modal .search_input i {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  content: "\f00d";
+  font-weight: 700;
+  font-family: "Font Awesome 5 Free";
+  cursor: pointer;
+}
+.search_modal_ex .search_modal .search_result {
+  padding: 10px 20px;
+  border-bottom: 1px solid #000;
+}
+.search_modal_ex .search_modal .search_result .search_result_title {
+  margin: 5px 0;
+}
+.search_modal_ex .search_modal .search_result .search_result_title .bar {
+  margin: 0 3px;
+  display: inline-block;
+  width: 2px;
+  height: 15px;
+  background-color: #000;
+}
+.search_modal_ex .search_modal .search_count {
+  padding: 10px 20px;
+}
+
+.header {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+.header .logo {
+  width: 5%;
+}
+.header .logo img {
+  width: 77px;
+}
+.header .gnb {
+  width: 90%;
+}
+.header .gnb ul li {
+  float: left;
+  text-align: center;
+  width: 25%;
+}
+.header .gnb ul li a:hover {
+  color: rgb(6, 85, 6);
+}
+.header .header_right {
+  width: 5%;
+}
+.header .header_right div {
+  float: left;
+  width: 50%;
+}
+.header .header_right div img {
+  width: 25px;
+}
+.header .header_right div i {
+  width: 25px;
+  content: "\f002";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.header .header_right .theme a {
+  color: orange;
+}
+.header .header_right .theme .night {
+  display: none;
+}
+
+.wrap .resume_contact {
+  margin-top: 150px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+.wrap .resume_contact .resume_contact_title span {
+  font-size: 40px;
+}
+.wrap .resume_contact .resume_contact_title .bar {
+  display: inline-block;
+  width: 6px;
+  height: 40px;
+  line-height: 40px;
+  background-color: black;
+  margin: 0 10px;
+  border-radius: 7px;
+  color: rgba(0, 0, 0, 0);
+}
+.wrap .resume_contact .resume_contact_title .download_resume {
+  font-size: 15px;
+  margin-left: 10px;
+}
+.wrap .resume_contact .resume_contact_detail {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.wrap .resume_contact .resume_contact_detail .resume_contact_image {
+  float: left;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 45px;
+}
+.wrap .resume_contact .resume_contact_detail .resume_contact_image img {
+  width: 100%;
+}
+.wrap .resume_contact .resume_contact_detail .resume_contact_text {
+  float: left;
+  width: calc(100% - 250px - 45px);
+  height: 250px;
+  padding: 10px 0;
+}
+.wrap .resume_contact .resume_contact_detail .resume_contact_text div {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.wrap .resume_contact .resume_contact_detail .resume_contact_text div h3 {
+  float: left;
+  font-size: 20px;
+  font-weight: normal;
+}
+.wrap .resume_contact .resume_contact_detail .resume_contact_text div img {
+  float: left;
+  width: 25px;
+  height: 25px;
+}
+.wrap .resume_contact .resume_contact_detail .resume_contact_text p {
+  font-size: 16px;
+  line-height: 30px;
+}
+.wrap .resume_contact .resume_contact_detail .resume_contact_text p b {
+  font-weight: normal;
+  cursor: pointer;
+}
+.wrap .resume_contact .resume_contact_detail .resume_contact_text p b:hover {
+  text-decoration: underline;
+}
+.wrap .introduce {
+  margin-top: 50px;
+}
+.wrap .introduce h1 {
+  font-size: 30px;
+}
+.wrap .introduce p {
+  margin-top: 50px;
+  line-height: 25px;
+}
+.wrap .experience_ex {
+  margin-top: 85px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+.wrap .experience_ex h1 {
+  font-size: 30px;
+  border-bottom: 3px solid #707070;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+.wrap .experience_ex .experience {
+  margin-top: 30px;
+}
+.wrap .experience_ex .experience .each_experience {
+  display: flex;
+  padding-bottom: 25px;
+}
+.wrap .experience_ex .experience .each_experience .experience_title {
+  width: 345px;
+  font-size: 15px;
+}
+.wrap .experience_ex .experience .each_experience .experience_title b {
+  width: 100%;
+  border-bottom: 1px solid #000;
+}
+.wrap .experience_ex .experience .each_experience .experience_detail {
+  width: 345px;
+}
+.wrap .experience_ex .experience .each_experience .experience_detail li {
+  list-style: disc;
+  line-height: 40px;
+}
+.wrap .project_ex {
+  margin-top: 85px;
+}
+.wrap .project_ex h1 {
+  font-size: 30px;
+  border-bottom: 3px solid #707070;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+.wrap .project_ex .each_project .project_title {
+  margin-top: 50px;
+}
+.wrap .project_ex .each_project .project_title h2 {
+  font-size: 19px;
+}
+.wrap .project_ex .each_project .project_title .project_desc {
+  display: flex;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 17px;
+}
+.wrap .project_ex .each_project .project_title .project_desc img {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+.wrap .project_ex .each_project .project_title .project_desc p {
+  width: calc(100% - 25px);
+}
+.wrap .project_ex .each_project .team_composition {
+  margin-top: 60px;
+}
+.wrap .project_ex .each_project .project_result,
+.wrap .project_ex .each_project .used_skills {
+  margin-top: 25px;
+}
+.wrap .project_ex .each_project .team_composition,
+.wrap .project_ex .each_project .project_result,
+.wrap .project_ex .each_project .used_skills {
+  padding-bottom: 20px;
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+.wrap .project_ex .each_project .team_composition div,
+.wrap .project_ex .each_project .project_result div,
+.wrap .project_ex .each_project .used_skills div {
+  width: 265px;
+  font-size: 16px;
+}
+.wrap .project_ex .each_project .team_composition ul,
+.wrap .project_ex .each_project .project_result ul,
+.wrap .project_ex .each_project .used_skills ul {
+  width: calc(100% - 265px);
+}
+.wrap .project_ex .each_project .team_composition ul li,
+.wrap .project_ex .each_project .project_result ul li,
+.wrap .project_ex .each_project .used_skills ul li {
+  list-style: disc;
+  line-height: 40px;
+}
+.wrap .project_ex .each_project .team_composition .my_skills li,
+.wrap .project_ex .each_project .project_result .my_skills li,
+.wrap .project_ex .each_project .used_skills .my_skills li {
+  line-height: 21px;
+}
+.wrap .project_ex .each_project .team_composition .my_skills li div,
+.wrap .project_ex .each_project .project_result .my_skills li div,
+.wrap .project_ex .each_project .used_skills .my_skills li div {
+  display: flex;
+  float: left;
+  margin-right: 8px;
+  height: 21px;
+  font-size: 13px;
+  line-height: 21px;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  width: auto;
+  padding: 0 7px;
+  align-items: center;
+}
+.wrap .project_ex .each_project .team_composition .my_skills li div img,
+.wrap .project_ex .each_project .project_result .my_skills li div img,
+.wrap .project_ex .each_project .used_skills .my_skills li div img {
+  width: 15px;
+  height: 15px;
+}
+.wrap .skills {
+  margin-top: 80px;
+}
+.wrap .skills h1 {
+  font-size: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #707070;
+  box-sizing: border-box;
+}
+.wrap .skills .each_skill {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  display: flex;
+}
+.wrap .skills .each_skill .skill_name {
+  display: flex;
+  padding: 2px;
+  margin-right: 15px;
+  width: 120px;
+  height: 30px;
+  font-size: 13px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.wrap .skills .each_skill .skill_name img {
+  margin-right: 5px;
+  width: 17px;
+  height: 17px;
+}
+.wrap .skills .each_skill .skill_name p {
+  width: calc(100% - 17px);
+}
+.wrap .skills .each_skill .progress_bar {
+  width: 100%;
+  height: 30px;
+  background-color: #dedede;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.wrap .skills .each_skill .progress_bar .progress {
+  position: relative;
+  width: 0;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  background-color: #acd194;
+  color: #111;
+  margin: 0;
+}
+.wrap .skills .each_skill .progress::before {
+  color: black;
+  content: attr(data-percent) "%";
+}
+.wrap .education_ex {
+  margin-top: 105px;
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+}
+.wrap .education_ex h1 {
+  font-size: 30px;
+  border-bottom: 3px solid #707070;
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+}
+.wrap .education_ex .education {
+  padding: 25px 0 0 0;
+}
+.wrap .education_ex .education .each_education {
+  display: flex;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.wrap .education_ex .education .each_education .school {
+  width: 175px;
+  border-right: 2px solid #eee;
+  box-sizing: border-box;
+}
+.wrap .education_ex .education .each_education .span {
+  width: 275px;
+  border-right: 2px solid #eee;
+  box-sizing: border-box;
+}
+.wrap .education_ex .education .each_education .major {
+  width: 240px;
+}
+
+.footer {
+  margin: 150px 0 130px 0;
+}
+.footer .today {
+  font-size: 15px;
+}
+.quick {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+}
+.quick div {
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  text-align: center;
+  line-height: 50px;
+  background-color: #ddf5df;
+}
+.quick div:hover {
+  font-weight: bold;
+}
+.quick div a {
+  display: block;
+}
+.quick div:nth-child(1) {
+  margin-bottom: 5px;
+}
+.quick .contact_btn a i {
+  content: "\f086";
+  font-weight: 300;
+  font-family: "Font Awesome 5 Free";
+}
+.quick .contact_btn:hover a i {
+  scale: 1.2;
+}/*# sourceMappingURL=resume.css.map */

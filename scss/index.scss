@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0 auto;
+  font-family: 'Noto Sans KR';
+}
+
+//다크모드
+.dark_mode {
+  background-color: rgb(0, 0, 0);
+  color: #aeaeae;
+
+  .header {
+    background-color: black;
+
+    .gnb {
+      ul {
+        li {
+          a {
+            color: #aeaeae;
+          }
+        }
+      }
+    }
+
+    .header_right {
+      .search {
+        a {
+          i {
+            color: #aeaeae;
+          }
+        }
+      }
+    }
+
+    .theme {
+      a {
+        color: gold;
+
+        .day {
+          display: none;
+        }
+
+        .night {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .resume_btn,
+  .portfolio_btn {
+    color: #aeaeae;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrap {
+  width: 710px;
+  margin: 0 auto;
+  // margin-top: 90px;
+}
+
+/*
+플러스 아이콘
+<i class="far fa-times"></i>
+ content: "\f00d"; 
+ font-weight: 400;
+ font-family: "Font Awesome 5 Free";
+
+ 채팅 아이콘
+ <i class="fal fa-comments"></i>
+ content: "\f086";
+ font-weight: 300;
+ font-family: "Font Awesome 5 Free";
+
+ 검색 아이콘
+ <i class="far fa-search"></i>
+ content: "\f002";
+ font-weight: 400;
+font-family: "Font Awesome 5 Free";
+ */
+
+//////////////modal////////////////////
+/// //////////////contact/////////////////
+//버튼 누르면 그 위치에 모달창 생기면서 버튼 사라지고 엑스버튼 누르면 다시 버튼 생기게
+.contact_modal {
+  display: none;
+  padding: 15px;
+  position: fixed;
+  z-index: 100;
+  bottom: 105px;
+  right: 0px;
+  width: 373px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+
+  div {
+    margin-bottom: 10px;
+
+  }
+
+  div:nth-child(1) {
+    position: relative;
+
+    img {
+      float: left;
+      width: 30px;
+      height: 30px;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+
+    i {
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      content: "\f00d";
+      font-weight: 700;
+      font-family: "Font Awesome 5 Free";
+      cursor: pointer;
+    }
+  }
+
+  div:nth-child(2) {
+    p {
+      line-height: 28px;
+    }
+  }
+
+  div:nth-child(3) {
+    p {
+      line-height: 35px;
+    }
+  }
+
+  .chat_btn {
+    margin-top: 15px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 2px solid rgb(6, 85, 6);
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+/////////////////search/////////////////////////////////
+/////////////////사이즈 상세 표기 자료 없어서 대략적으로 만들고 다시 만들 예정///////////
+.search_modal_ex {
+  display: none;
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.5);
+
+  .search_modal {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 600px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 7px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-weight: bold;
+
+    .search_input {
+      position: relative;
+      padding: 20px;
+      border-bottom: 1px solid #000;
+
+      input {
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        content: "\f00d";
+        font-weight: 700;
+        font-family: "Font Awesome 5 Free";
+        cursor: pointer;
+      }
+    }
+
+    .search_result {
+      padding: 10px 20px;
+      border-bottom: 1px solid #000;
+
+      .search_result_title {
+        margin: 5px 0;
+
+        .bar {
+          margin: 0 3px;
+          display: inline-block;
+          width: 2px;
+          height: 15px;
+          background-color: #000;
+        }
+      }
+    }
+
+    .search_count {
+      padding: 10px 20px;
+
+    }
+  }
+}
+/////////////////////header////////////
+.header {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  .logo {
+    width: 5%;
+    img {
+      width: 77px;
+    }
+  }
+  
+ .gnb {
+    width: 90%;
+    ul li {
+      float: left;
+      text-align: center;
+      width: 25%;
+    }
+   ul li a:hover {
+      color: rgb(6, 85, 6);
+    }
+  }
+  .header_right {
+    width: 5%;
+   div {
+      float: left;
+      width: 50%;
+   img {
+         width: 25px;
+       }
+      i {
+         width: 25px;
+         content: "\f002";
+         font-weight: 900;
+         font-family: "Font Awesome 5 Free";
+       }
+    }
+   .theme{ 
+    a{
+color: orange
+    };.night {
+    display: none;
+  }}
+  }
+}
+.home_page{
+  //////////////introduce//////////////////////
+  .introduce {
+    margin-top: 150px;
+    width: 710px;
+    height: auto;
+  
+    h1 {
+      font-size: 40px;
+      margin-top: 115px;
+    }
+  
+    div:nth-child(2) {
+      margin-top: 60px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+  
+      h2 {
+        font-size: 29px;
+        width: calc(100% - 40px - 5px);
+      }
+  
+      img {
+        width: 40px;
+        height: 40px;
+        padding-top: 2px;
+        box-sizing: border-box;
+        margin-right: 5px;
+      }
+    }
+  
+    .profile_image {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      margin-top: 15px;
+      width: 710px;
+      height: 295px;
+  
+      img {
+        width: 100px;
+      }
+    }
+  
+    .introduce_text {
+      margin-top: 13px;
+      padding: 10px 25px;
+      box-sizing: border-box;
+      border: 1px solid #eee;
+      border-radius: 8px;
+  
+      p {
+        font-size: 16px;
+        line-height: 40px;
+      }
+    }
+  }
+  
+  //////////////readme////////////////////
+  .readme {
+    margin-top: 50px;
+  
+    h1 {
+      font-size: 22px;
+      width: 100%;
+    }
+  
+    .btn_ex_wrap {
+      overflow: hidden;
+  
+      .btn_ex {
+        margin: 25px 0 50px 0;
+        width: 346px;
+        height: auto;
+        float: left;
+  
+        a {
+          .resume_btn {
+            margin-right: 16px;
+            position: relative;
+            border: 5px solid #7ED957;
+            border-radius: 15px;
+            height: 197px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 197px;
+  
+            img {
+              position: absolute;
+              width: 50px;
+              height: 50px;
+  
+              &:nth-child(1) {
+                right: 45px;
+                top: 50px;
+                rotate: 27deg;
+              }
+  
+              &:nth-child(2) {
+                top: 120px;
+                left: 20px;
+              }
+            }
+          }
+        }
+  
+        p {
+          margin-top: 25px;
+          text-align: center;
+          line-height: 40px;
+  
+  
+        }
+  
+        a {
+  
+          .portfolio_btn {
+            position: relative;
+            border: 5px solid #FF8BD2;
+            border-radius: 15px;
+            height: 197px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 197px;
+  
+            img {
+              position: absolute;
+              width: 50px;
+              height: 50px;
+              top: 70px;
+              right: 20px;
+            }
+          }
+        }
+      }
+    }
+  
+    .btn_desc {
+      overflow: hidden;
+  
+      //  display: flex;
+      div {
+        float: left;
+  
+        img {
+          width: 25px;
+          height: 25px;
+          padding-top: 3px;
+          box-sizing: border-boxs;
+        }
+      }
+  
+      p {
+        float: left;
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+  
+    .resume_mini {
+      border: 2px solid #7ED957;
+      padding: 0 5px;
+      border-radius: 7px;
+    }
+  
+    .portfolio_mini {
+      border: 2px solid #FF8BD2;
+      padding: 0 5px;
+      border-radius: 7px;
+    }
+    .resume_download:hover{
+text-decoration: underline;
+    }
+  }
+
+}
+
+///////////////////////footer///////////////////////
+.footer {
+  margin: 150px 0 130px 0;
+
+  .today {
+    font-size: 15px;
+
+    .today_count {}
+  }
+}
+
+.quick {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+
+  div {
+    width: 50px;
+    height: 50px;
+    // border: 1px solid black;
+    border-radius: 30%;
+    text-align: center;
+    line-height: 50px;
+    background-color: #ddf5df;
+
+    &:hover {
+      font-weight: bold;
+    }
+
+    a {
+      display: block;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 5px;
+    }
+  }
+
+  .contact_btn {
+    a {
+      i {
+        content: "\f086";
+        font-weight: 300;
+        font-family: "Font Awesome 5 Free";
+      }
+    }
+
+    &:hover a i {
+      scale: 1.2;
+    }
+  }
+
+  .top_btn {}
+
+}

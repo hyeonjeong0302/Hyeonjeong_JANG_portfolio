@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - 장현정 포트폴리오</title>
+  <!-- scss 연결-->
+  <link rel="stylesheet" href="./scss/resume.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon_color.png" type="image/x-icon">
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+  <!-- javascript 연결 -->
+ <script src="./js/resume.js" defer></script>
+ <script src="./js/modal.js" defer></script>
+ <script src="js/common.js" defer></script>
+
+
+</head>
+
+<body class="mode" id="mode">
+  <!-- modal -->
+  <div class="contact_modal" id="contactModal">
+    <div><img src="./images/favicon_color.png" alt="icon">
+      <h1>장현정</h1><i class="far fa-times" id="chatCloseBtn"></i>
+    </div>
+    <div>
+      <p>안녕하세요. 웹 프론트엔드 개발자 장현정입니다. <br />
+        연락주시면 최대한 빨리 답장드리겠습니다.</p>
+    </div>
+    <div>
+      <p>전화번호. 010-2769-8932</p>
+      <p>Email. <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wkdguswjd7@gmail.com"target="_blank">wkdguswjd7@gmail.com</a></p>
+    </div>
+    <button class="chat_btn">
+      채팅으로 연락하기
+    </button>
+  </div>
+  <!--contact_modal-->
+  <div class="search_modal_ex">
+    <div class="search_modal">
+      <div class="search_input">
+        <input type="text" style="font-size: 17px;">
+        <i class="far fa-times" id="searchCloseBtn"></i>
+      </div>
+      <div class="search_result">
+        <div class="search_result_title">
+          <!-- 이렇게 구분해서 코딩했지만 나중에는 제목을 받아오는 형식으로 바꿀 예정! -->
+          <span>장현정</span><span class="bar"></span> <span>Resume(검색결과 예시)</span> </div>
+        <div class="search_result_title"><span>장현정</span><span class="bar"></span> <span>README(예시)</span></div>
+      </div>
+      <div class="search_count">
+        <p>검색 결과 <b class="search_number">2</b>개</p>
+      </div>
+    </div>
+    <!-- search_modal -->
+  </div>
+  <!--search_modal_ex-->
+  <!-- modal -->
+  <header class="header">
+    <div class="logo"><a href="./index.html"> <img src="./images/logo_color.png" alt="logo"></a>
+    </div>
+    <div class="gnb">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./portfolio.html">Portfolio</a></li>
+        <li><a href="./resume.html">Resume</a></li>
+        <li><a href="#!">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="header_right">
+      <div class="search"><a href="#!"> <i class="far fa-search"></i></a></div>
+      <div class="theme"><a href="#!">
+          <svg class="day" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm6.312-10.897c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z">
+            </path>
+          </svg>
+          <svg class="night" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M20.6144 14.6145C19.787 14.8653 18.9093 15.0001 18 15.0001C13.0294 15.0001 9 10.9707 9 6.00013C9 5.09088 9.13484 4.21311 9.3856 3.38574C5.69007 4.50583 3 7.93883 3 12.0001C3 16.9707 7.02944 21.0001 12 21.0001C16.0613 21.0001 19.4943 18.3101 20.6144 14.6145Z">
+            </path>
+          </svg>
+        </a></div>
+    </div>
+  </header>
+  <!-- header -->
+
+  <div class="wrap">
+    <div class="resume_contact">
+      <div class="resume_contact_title">
+        <span>장현정</span><span class="bar">.</span><span>Resume</span><span class="download_resume">이력서 다운로드</span>
+      </div>
+      <!--resume_contact_title-->
+      <div class="resume_contact_detail">
+        <div class="resume_contact_image"><img src="" alt=""></div>
+        <!--resume_contact_image-->
+        <div class="resume_contact_text">
+          <div class="text_contact">
+            <div>
+              <h3>Contact</h3> <img src="./images/favicon_color.png" alt="">
+            </div>
+            <!-- 이메일 주소 누르면 메일보내기 창 뜨게 만들기 -->
+            <p>Email. <b><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wkdguswjd7@gmail.com"target="_blank">wkdguswjd7@gmail.com</a></b></p>
+            <p>Phone. <b>010-2769-8932</b></p>
+          </div>
+          <!--text_contact-->
+          <div class="text_channel">
+            <div>
+              <h3>Channel</h3> <img src="./images/favicon_color.png" alt="">
+            </div>
+            <p>GitHub. <b>github.com</b></p>
+            <p>Portfolio. <b>djWjrnwjWjrn.con-메종</b></p>
+            <p>Portfolio. <b>djWjrnwjWjrn.con-일광</b></p>
+          </div>
+          <!--text_channel-->
+        </div>
+        <!--resume_contact_text-->
+      </div>
+      <!--resume_contact_detail-->
+    </div>
+    <!--resume_contact-->
+
+    <div class="introduce">
+      <h1>Introduce</h1>
+      <p>어쩌구저쩌구 머시기 개발자 장현정입니다. <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad labore aperiam expedita. Error voluptatibus
+        debitis molestias id cumque ea excepturi. Repudiandae, ex. Velit porro at, praesentium, repellat eos laud
+        antium libero laborum autem placeat quisquam voluptatum delectus excepturi explicabo cupiditate volu
+        ptatem architecto, asperiores error atque ad accusantium obcaecati iure suscipit! Eligendi voluptatum ita
+        que exercitationem veritatis quae eveniet dicta officia similique. Error voluptatem, numquam consequun
+        tur exercitationem eos molestias corrupti commodi sed ex mollitia reiciendis earum, tempore aspernatur
+        blanditiis itaque sapiente ipsa officia quidem dolore nostrum odit quisquam ad vero! Rerum voluptatum
+        fugit, quisquam sapiente expedita laboriosam earum laborum sit alias amet sequi?
+      </p>
+    </div>
+    <!--introduce-->
+    <div class="experience_ex">
+      <h1>Dev Experience</h1>
+      <div class="experience">
+        <div class="each_experience">
+          <div class="experience_title">
+            <b>그린컴퓨터 어쩌구</b>
+            <p>2023/00/00 - 2023/00/00</p>
+          </div>
+          <!--experience_title-->
+          <ul class="experience_detail">
+            <li>머머머</li>
+            <li>어떻게어떻게 했습니다.</li>
+            <li>어저꾸저쩌ㅉ구 했습니다.</li>
+          </ul>
+          <!--experience_detail-->
+        </div>
+        <!--each_experience-->
+      </div>
+      <!--experience-->
+    </div>
+    <!--experience_ex-->
+    <div class="project_ex">
+      <h1>Project</h1>
+      <div class="each_project">
+        <div class="project_title">
+          <h2>일광전구 구매사이트</h2>
+          <div class="project_desc"><img src="./images/favicon_color.png" alt="">
+            <p>일광전구 구매 사이트 리뉴얼 프로젝트</p>
+          </div>
+        </div>
+        <!--project_title-->
+        <div class="team_composition">
+          <div>팀프로젝트</div>
+          <ul>
+            <li>프론트엔드 6명</li>
+            <li class="my_role">프론트엔드 무슨 담당</li>
+          </ul>
+        </div>
+        <!--team_composition-->
+        <div class="project_result">
+          <div>프로젝트 결과물</div>
+          <ul>
+            <li>www.fdjkfjslsdf.conm</li>
+            <li>www.fdjkfjslsdf.conm</li>
+            <li>www.fdjkfjslsdf.conm</li>
+          </ul>
+        </div>
+        <!--project_result-->
+        <div class="used_skills">
+          <div>활용한 기술 스택</div>
+          <ul class="my_skills">
+            <li><div><img src="./images/icon_html5.png" alt="">HTML5</div><div><img src="./images/icon_css3.png" alt="">CSS3</div><div><img src="./images/icon_javascript.png" alt="">JavaScript</div><div><img src="./images/icon_jquery.png" alt="">jQuery</div></li>
+          </ul>
+        </div>
+        <!--used_skills-->
+      </div>
+      <!--each_project-->
+    </div>
+    <!--project_ex-->
+
+    <div class="skills">
+      <h1>skills</h1>
+      <div class="each_skill javascript" >
+        <div class="skill_name"><img src="./images/icon_javascript.png" alt=""><p>JavaScript</p>
+        </div>
+        <div class="progress_bar">
+          <div class="progress" data-percent="100"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+      <div class="each_skill react">
+        <div class="skill_name"><img src="./images/icon_react.png" alt=""><p>React</p></div>
+        <div class="progress_bar">
+          <div class="progress" data-percent="80"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+      <div class="each_skill html">
+        <div class="skill_name"><img src="./images/icon_html5.png" alt=""><p>HTML5</p></div>
+        <div class="progress_bar">
+          <div class="progress" data-percent="100"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+      <div class="each_skill css">
+        <div class="skill_name"><img src="./images/icon_css3.png" alt=""><p>CSS3</p></div>
+        <div class="progress_bar">
+          <div class="progress"data-percent="100"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+      <div class="each_skill scss">
+        <div class="skill_name"><img src="./images/icon_scss.png" alt=""><p>SCSS</p></div>
+        <div class="progress_bar">
+          <div class="progress"data-percent="90"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+      <div class="each_skill node_js">
+        <div class="skill_name"><img src="./images/icon_nodejs.png" alt=""><p>Node.js</p></div>
+        <div class="progress_bar">
+          <div class="progress"data-percent="65"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+      <div class="each_skill git">
+        <div class="skill_name"><img src="./images/icon_git.png" alt=""><p>Git</p></div>
+        <div class="progress_bar">
+          <div class="progress"data-percent="70"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+      <div class="each_skill github">
+        <div class="skill_name"><img src="./images/icon_github.png" alt=""><p>GitHub</p></div>
+        <div class="progress_bar">
+          <div class="progress"data-percent="80"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+      <div class="each_skill xd">
+        <div class="skill_name"><img src="./images/icon_xd.png" alt=""><p>XD</p></div>
+        <div class="progress_bar">
+          <div class="progress"data-percent="90"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+      <div class="each_skill figma">
+        <div class="skill_name"><img src="./images/icon_figma.png" alt=""><p>Figma</p></div>
+        <div class="progress_bar"data-percent="100">
+          <div class="progress"data-percent="90"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+      <div class="each_skill parcel_bundler">
+        <div class="skill_name"><img src="./images/icon_parcel_bundler.jpg" alt=""><p>Paecel Bundler</p></div>
+        <div class="progress_bar">
+          <div class="progress"data-percent="80"> </div>
+        </div>
+      </div>
+      <!--each_skill-->
+
+    </div>
+    <!--skill-->
+    <div class="education_ex">
+      <h1>Education</h1>
+      <div class="education">
+        <div class="each_education">
+          <span class="school">대학교</span>
+          <span class="span">2008.03 - 2018.02</span>
+          <span class="major">국어국문학 학사</span>
+        </div>
+        <!--university-->
+        <div class="each_education">
+          <span class="school">고등학교</span>
+          <span class="span">2005.03 - 2008.02</span>
+          <span class="major"></span>
+        </div>
+        <!--high_school-->
+      </div>
+      <!--education-->
+    </div>
+    <!--education_ex-->
+    <footer class="footer">
+      <div class="today">Today <b class="today_count">1</b></div>
+    </footer>
+    <div class="quick">
+      <div class="contact_btn"><a href="#!"><i class="fal fa-comments"></i></div>
+      <div class="top_btn"><a href="#">TOP</a></div>
+    </div>
+    <!--quick-->
+  </div>
+  <!--wrap-->
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - 장현정 포트폴리오</title>
+  <!-- scss 연결-->
+  <!-- <link rel="stylesheet" href="./scss/index.css"> -->
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon_color.png" type="image/x-icon">
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+  <!-- <script src="./js/index.js" defer></script>
+  <script src="./js/modal.js" defer></script> -->
+  <style>
+    @charset "UTF-8";
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+    * {
+      margin: 0 auto;
+      font-family: "Noto Sans KR";
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .wrap {
+      width: 710px;
+      margin: 0 auto;
+    }
+
+    .header {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 90px;
+      padding: 0 50px;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header .logo {
+      width: 5%;
+    }
+
+    .header .logo img {
+      width: 77px;
+    }
+
+    .header .gnb {
+      width: 90%;
+    }
+
+    .header .gnb ul li {
+      float: left;
+      text-align: center;
+      width: 25%;
+    }
+
+    .header .gnb ul li a:hover {
+      color: rgb(6, 85, 6);
+    }
+
+    .header .header_right {
+      width: 5%;
+    }
+
+    .header .header_right div {
+      float: left;
+      width: 50%;
+    }
+
+    .header .header_right div img {
+      width: 25px;
+    }
+    .header .header_right div i {
+      width: 25px;
+      content: "\f002";
+ font-weight: 900;
+font-family: "Font Awesome 5 Free";
+    }
+
+    .header .header_right .theme .night {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo"><a href="./index.html"> <img src="./images/logo_color.png" alt="logo"></a>
+    </div>
+    <div class="gnb">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./portfolio.html">Portfolio</a></li>
+        <li><a href="./resume.html">Resume</a></li>
+        <li><a href="#!">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="header_right">
+      <div class="search"><a href="#!"> <i class="far fa-search"></i></a></div>
+      <div class="theme"><a href="#!">
+          <svg class="day" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm6.312-10.897c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z">
+            </path>
+          </svg>
+          <svg class="night" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M20.6144 14.6145C19.787 14.8653 18.9093 15.0001 18 15.0001C13.0294 15.0001 9 10.9707 9 6.00013C9 5.09088 9.13484 4.21311 9.3856 3.38574C5.69007 4.50583 3 7.93883 3 12.0001C3 16.9707 7.02944 21.0001 12 21.0001C16.0613 21.0001 19.4943 18.3101 20.6144 14.6145Z">
+            </path>
+          </svg>
+        </a></div>
+    </div>
+  </header>
+  <!-- header -->
+</body>
+
+</html>

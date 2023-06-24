@@ -1,0 +1,414 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0 auto;
+  font-family: "Noto Sans KR";
+}
+
+.dark_mode {
+  background-color: rgb(0, 0, 0);
+  color: #aeaeae;
+}
+.dark_mode .header {
+  background-color: black;
+}
+.dark_mode .header .gnb ul li a {
+  color: #aeaeae;
+}
+.dark_mode .header .header_right .search a i {
+  color: #aeaeae;
+}
+.dark_mode .header .theme a {
+  color: gold;
+}
+.dark_mode .header .theme a .day {
+  display: none;
+}
+.dark_mode .header .theme a .night {
+  display: block;
+}
+.dark_mode .resume_btn,
+.dark_mode .portfolio_btn {
+  color: #aeaeae;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrap {
+  width: 710px;
+  margin: 0 auto;
+}
+
+/*
+플러스 아이콘
+<i class="far fa-times"></i>
+ content: "\f00d"; 
+ font-weight: 400;
+ font-family: "Font Awesome 5 Free";
+
+ 채팅 아이콘
+ <i class="fal fa-comments"></i>
+ content: "\f086";
+ font-weight: 300;
+ font-family: "Font Awesome 5 Free";
+
+ 검색 아이콘
+ <i class="far fa-search"></i>
+ content: "\f002";
+ font-weight: 400;
+font-family: "Font Awesome 5 Free";
+ */
+.contact_modal {
+  display: none;
+  padding: 15px;
+  position: fixed;
+  z-index: 100;
+  bottom: 105px;
+  right: 0px;
+  width: 373px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+}
+.contact_modal div {
+  margin-bottom: 10px;
+}
+.contact_modal div:nth-child(1) {
+  position: relative;
+}
+.contact_modal div:nth-child(1) img {
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.contact_modal div:nth-child(1) h1 {
+  font-size: 25px;
+}
+.contact_modal div:nth-child(1) i {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  content: "\f00d";
+  font-weight: 700;
+  font-family: "Font Awesome 5 Free";
+  cursor: pointer;
+}
+.contact_modal div:nth-child(2) p {
+  line-height: 28px;
+}
+.contact_modal div:nth-child(3) p {
+  line-height: 35px;
+}
+.contact_modal .chat_btn {
+  margin-top: 15px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 2px solid rgb(6, 85, 6);
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+}
+.contact_modal .chat_btn:hover {
+  font-weight: bold;
+}
+
+.search_modal_ex {
+  display: none;
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.search_modal_ex .search_modal {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 600px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 7px;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-weight: bold;
+}
+.search_modal_ex .search_modal .search_input {
+  position: relative;
+  padding: 20px;
+  border-bottom: 1px solid #000;
+}
+.search_modal_ex .search_modal .search_input input {
+  border: none;
+}
+.search_modal_ex .search_modal .search_input input:focus {
+  outline: none;
+}
+.search_modal_ex .search_modal .search_input i {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  content: "\f00d";
+  font-weight: 700;
+  font-family: "Font Awesome 5 Free";
+  cursor: pointer;
+}
+.search_modal_ex .search_modal .search_result {
+  padding: 10px 20px;
+  border-bottom: 1px solid #000;
+}
+.search_modal_ex .search_modal .search_result .search_result_title {
+  margin: 5px 0;
+}
+.search_modal_ex .search_modal .search_result .search_result_title .bar {
+  margin: 0 3px;
+  display: inline-block;
+  width: 2px;
+  height: 15px;
+  background-color: #000;
+}
+.search_modal_ex .search_modal .search_count {
+  padding: 10px 20px;
+}
+
+.header {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+.header .logo {
+  width: 5%;
+}
+.header .logo img {
+  width: 77px;
+}
+.header .gnb {
+  width: 90%;
+}
+.header .gnb ul li {
+  float: left;
+  text-align: center;
+  width: 25%;
+}
+.header .gnb ul li a:hover {
+  color: rgb(6, 85, 6);
+}
+.header .header_right {
+  width: 5%;
+}
+.header .header_right div {
+  float: left;
+  width: 50%;
+}
+.header .header_right div img {
+  width: 25px;
+}
+.header .header_right div i {
+  width: 25px;
+  content: "\f002";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+.header .header_right .theme a {
+  color: orange;
+}
+.header .header_right .theme .night {
+  display: none;
+}
+
+.home_page .introduce {
+  margin-top: 150px;
+  width: 710px;
+  height: auto;
+}
+.home_page .introduce h1 {
+  font-size: 40px;
+  margin-top: 115px;
+}
+.home_page .introduce div:nth-child(2) {
+  margin-top: 60px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.home_page .introduce div:nth-child(2) h2 {
+  font-size: 29px;
+  width: calc(100% - 40px - 5px);
+}
+.home_page .introduce div:nth-child(2) img {
+  width: 40px;
+  height: 40px;
+  padding-top: 2px;
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+.home_page .introduce .profile_image {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-top: 15px;
+  width: 710px;
+  height: 295px;
+}
+.home_page .introduce .profile_image img {
+  width: 100px;
+}
+.home_page .introduce .introduce_text {
+  margin-top: 13px;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+.home_page .introduce .introduce_text p {
+  font-size: 16px;
+  line-height: 40px;
+}
+.home_page .readme {
+  margin-top: 50px;
+}
+.home_page .readme h1 {
+  font-size: 22px;
+  width: 100%;
+}
+.home_page .readme .btn_ex_wrap {
+  overflow: hidden;
+}
+.home_page .readme .btn_ex_wrap .btn_ex {
+  margin: 25px 0 50px 0;
+  width: 346px;
+  height: auto;
+  float: left;
+}
+.home_page .readme .btn_ex_wrap .btn_ex a .resume_btn {
+  margin-right: 16px;
+  position: relative;
+  border: 5px solid #7ED957;
+  border-radius: 15px;
+  height: 197px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 197px;
+}
+.home_page .readme .btn_ex_wrap .btn_ex a .resume_btn img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+.home_page .readme .btn_ex_wrap .btn_ex a .resume_btn img:nth-child(1) {
+  right: 45px;
+  top: 50px;
+  rotate: 27deg;
+}
+.home_page .readme .btn_ex_wrap .btn_ex a .resume_btn img:nth-child(2) {
+  top: 120px;
+  left: 20px;
+}
+.home_page .readme .btn_ex_wrap .btn_ex p {
+  margin-top: 25px;
+  text-align: center;
+  line-height: 40px;
+}
+.home_page .readme .btn_ex_wrap .btn_ex a .portfolio_btn {
+  position: relative;
+  border: 5px solid #FF8BD2;
+  border-radius: 15px;
+  height: 197px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 197px;
+}
+.home_page .readme .btn_ex_wrap .btn_ex a .portfolio_btn img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 70px;
+  right: 20px;
+}
+.home_page .readme .btn_desc {
+  overflow: hidden;
+}
+.home_page .readme .btn_desc div {
+  float: left;
+}
+.home_page .readme .btn_desc div img {
+  width: 25px;
+  height: 25px;
+  padding-top: 3px;
+  box-sizing: border-boxs;
+}
+.home_page .readme .btn_desc p {
+  float: left;
+  font-size: 16px;
+  line-height: 30px;
+}
+.home_page .readme .resume_mini {
+  border: 2px solid #7ED957;
+  padding: 0 5px;
+  border-radius: 7px;
+}
+.home_page .readme .portfolio_mini {
+  border: 2px solid #FF8BD2;
+  padding: 0 5px;
+  border-radius: 7px;
+}
+.home_page .readme .resume_download:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  margin: 150px 0 130px 0;
+}
+.footer .today {
+  font-size: 15px;
+}
+.quick {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+}
+.quick div {
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  text-align: center;
+  line-height: 50px;
+  background-color: #ddf5df;
+}
+.quick div:hover {
+  font-weight: bold;
+}
+.quick div a {
+  display: block;
+}
+.quick div:nth-child(1) {
+  margin-bottom: 5px;
+}
+.quick .contact_btn a i {
+  content: "\f086";
+  font-weight: 300;
+  font-family: "Font Awesome 5 Free";
+}
+.quick .contact_btn:hover a i {
+  scale: 1.2;
+}/*# sourceMappingURL=index.css.map */

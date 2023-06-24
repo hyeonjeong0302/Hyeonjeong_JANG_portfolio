@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+* {
+  box-sizing:border-box;
+}
+body {
+  background:#ddd;
+  font-family:"Raleway";
+}
+.tabs {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:680px;
+  height:360px;
+  padding:30px 20px;
+  background:#f5f5f5;
+  box-shadow:5px 5px 10px 5px #ccc;
+  overflow:hidden;
+}
+.tabs .tab-header {
+  float:left;
+  width:180px;
+  height:100%;
+  border-right:1px solid #ccc;
+  padding:50px 0px;
+}
+.tabs .tab-header > div {
+  height:50px;
+  line-height:50px;
+  font-size:16px;
+  font-weight:600;
+  color:#888;
+  cursor:pointer;
+  padding-left:10px;
+}
+.tabs .tab-header > div:hover,
+.tabs .tab-header > div.active {
+  color:#00acee;
+}
+.tabs .tab-header div i {
+  display:inline-block;
+  margin-left:10px;
+  margin-right:5px;
+}
+.tabs .tab-content {
+  position:relative;
+  height:100%;
+  overflow:hidden;
+}
+.tabs .tab-content > div > i {
+  display:inline-block;
+  width:50px;
+  height:50px;
+  background:#555;
+  color:#f5f5f5;
+  font-size:25px;
+  font-weight:600;
+  text-align:center;
+  line-height:50px;
+  border-radius:50%;
+}
+.tabs .tab-content > div {
+  position:absolute;
+  text-align:center;
+  padding:40px 20px;
+  top:-200%;
+  transition:all 500ms ease-in-out;
+}
+.tabs .tab-content > div.active {
+  top:0px;
+}
+
+.tabs .tab-indicator {
+  position:absolute;
+  width:4px;
+  height:50px;
+  background:#00acee;
+  left:198px;
+  top:80px;
+  transition:all 500ms ease-in-out;
+}
+  </style>
+</head>
+
+<body>
+  <div class="tabs">
+    <div class="tab-header">
+      <div class="active">
+        <i class="fa fa-code"></i> Main Page
+      </div>
+      <div>
+        <i class="fa fa-pencil-square"></i> Sub Page
+      </div>
+      <div>
+        <i class="fa fa-bar-chart"></i> Detail Page
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i> Contact
+      </div>
+    </div>
+    <div class="tab-indicator"></div>
+    <div class="tab-content">
+      
+      <div class="active">
+     <div class="view_code_btn"><a href="#!">코드보기</a></div>
+     <div class="github_btn"><a href="#!">코드보기</a>Github</div>
+     <div class="product_btn"><a href="#!">일광전구</a></div>
+      </div>
+      
+      <div>
+     <video src=""></video>
+      </div>
+      
+      <div>
+       <video src=""></video>
+      </div>
+      
+      <div>
+        <video src=""></video>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script>
+function _class(name){
+  return document.getElementsByClassName(name);
+}
+
+let tabPanes = _class("tab-header")[0].getElementsByTagName("div");
+
+for(let i=0;i<tabPanes.length;i++){
+  tabPanes[i].addEventListener("click",function(){
+    _class("tab-header")[0].getElementsByClassName("active")[0].classList.remove("active");
+    tabPanes[i].classList.add("active");
+    
+    _class("tab-indicator")[0].style.top = `calc(80px + ${i*50}px)`;
+    
+    _class("tab-content")[0].getElementsByClassName("active")[0].classList.remove("active");
+    _class("tab-content")[0].getElementsByTagName("div")[i].classList.add("active");
+    
+  });
+}
+  </script>
+</body>
+
+</html>

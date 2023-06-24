@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0 auto;
+  font-family: 'Noto Sans KR';
+}
+
+//다크모드
+.dark_mode {
+  background-color: rgb(0, 0, 0);
+  color: #aeaeae;
+
+  .header {
+    background-color: black;
+
+    .gnb {
+      ul {
+        li {
+          a {
+            color: #aeaeae;
+          }
+        }
+      }
+    }
+
+    .header_right {
+      .search {
+        a {
+          i {
+            color: #aeaeae;
+          }
+        }
+      }
+    }
+
+    .theme {
+      a {
+        color: gold;
+
+        .day {
+          display: none;
+        }
+
+        .night {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .resume_btn,
+  .portfolio_btn {
+    color: #aeaeae;
+  }
+}
+ 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrap {
+  width: 710px;
+  margin: 0 auto;
+  // margin-top: 90px;
+
+}
+
+/*
+플러스 아이콘
+<i class="far fa-times"></i>
+ content: "\f00d"; 
+ font-weight: 400;
+ font-family: "Font Awesome 5 Free";
+
+ 채팅 아이콘
+ <i class="fal fa-comments"></i>
+ content: "\f086";
+ font-weight: 300;
+ font-family: "Font Awesome 5 Free";
+ */
+
+//////////////modal////////////////////
+/// //////////////contact/////////////////
+//버튼 누르면 그 위치에 모달창 생기면서 버튼 사라지고 엑스버튼 누르면 다시 버튼 생기게
+.contact_modal {
+  display: none;
+  padding: 15px;
+  position: fixed;
+  z-index: 100;
+  bottom: 105px;
+  right: 0px;
+  width: 373px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+
+  div {
+    margin-bottom: 10px;
+
+  }
+
+  div:nth-child(1) {
+    position: relative;
+
+    img {
+      float: left;
+      width: 30px;
+      height: 30px;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+
+    i {
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      content: "\f00d";
+      font-weight: 700;
+      font-family: "Font Awesome 5 Free";
+      cursor: pointer;
+    }
+  }
+
+  div:nth-child(2) {
+    p {
+      line-height: 28px;
+    }
+  }
+
+  div:nth-child(3) {
+    p {
+      line-height: 35px;
+    }
+  }
+
+  .chat_btn {
+    margin-top: 15px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 2px solid rgb(6, 85, 6);
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+/////////////////search/////////////////////////////////
+/////////////////사이즈 상세 표기 자료 없어서 대략적으로 만들고 다시 만들 예정///////////
+.search_modal_ex {
+  display: none;
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.5);
+
+  .search_modal {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 600px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 7px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-weight: bold;
+
+    .search_input {
+      padding: 20px;
+      border-bottom: 1px solid #000;
+
+      input {
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        content: "\f00d";
+        font-weight: 700;
+        font-family: "Font Awesome 5 Free";
+        cursor: pointer;
+      }
+    }
+
+    .search_result {
+      padding: 10px 20px;
+      border-bottom: 1px solid #000;
+
+      .search_result_title {
+        margin: 5px 0;
+
+        .bar {
+          margin: 0 3px;
+          display: inline-block;
+          width: 2px;
+          height: 15px;
+          background-color: #000;
+        }
+      }
+    }
+
+    .search_count {
+      padding: 10px 20px;
+
+    }
+  }
+}
+
+/////////////////////header////////////
+.header {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  .logo {
+    width: 5%;
+    img {
+      width: 77px;
+    }
+  }
+  
+ .gnb {
+    width: 90%;
+    ul li {
+      float: left;
+      text-align: center;
+      width: 25%;
+    }
+   ul li a:hover {
+      color: rgb(6, 85, 6);
+    }
+  }
+  .header_right {
+    width: 5%;
+   div {
+      float: left;
+      width: 50%;
+   img {
+         width: 25px;
+       }
+      i {
+         width: 25px;
+         content: "\f002";
+         font-weight: 900;
+         font-family: "Font Awesome 5 Free";
+       }
+    }
+   .theme{ 
+    a{
+color: orange
+    };.night {
+    display: none;
+  }}
+  }
+}
+///////////////////공통요소 끝//////////////////
+
+//////////////////////portfolio////////////////////
+.portfolio_introduce {
+
+  .portfolio_introduce_image {
+    margin-top: 165px;
+    margin-left: 0px;
+    width: 125px;
+    height: 125px;
+    border: 1px solid black;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .portfolio_introduce_title {
+    margin-top: 40px;
+
+    span {
+      font-size: 40px;
+    }
+
+    .bar {
+      display: inline-block;
+      width: 6px;
+      height: 40px;
+      line-height: 40px;
+      background-color: black;
+      margin: 0 10px;
+      border-radius: 7px;
+      color: rgb(0, 0, 0, 0);
+    }
+  }
+
+  .portfolio_introduce_detail {
+    width: 710px;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .portfolio_introduce_detatil_text {
+      padding: 25px 45px;
+      float: left;
+      width: 455px;
+      height: 130px;
+      border: 1px solid #eee;
+      box-sizing: border-box;
+    }
+
+    .portfolio_introduce_detail_personal {
+      padding: 20px;
+      float: left;
+      width: calc(100% - 455px);
+      height: 130px;
+      border: 1px solid #eee;
+      border-left: none;
+      box-sizing: border-box;
+
+      div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+        }
+
+        span {
+          width: calc(100% - 20px);
+        }
+      }
+    }
+  }
+
+}
+
+////////////////////skills/////////////////////////
+.skills_wrap {
+  margin-top: 70px;
+
+  h1 {
+    font-size: 25px;
+    border-bottom: 1px solid black;
+  }
+
+  .skills {
+    margin-top: 30px;
+
+    .each_category {
+      width: 100%;
+      display: flex;
+
+      .skills_categories {
+        display: flex;
+        // align-items: center;
+        width: 250px;
+
+        img {
+          width: 25px;
+          height: 25px;
+        }
+
+        p {
+          width: calc(250px - 15px);
+          font-size: 17px;
+        }
+      }
+
+      .possessed_skills {
+        width: 460px;
+
+        div {
+          padding: 2px 4px;
+          margin: 0 8px 10px 0;
+          float: left;
+          height: 21px;
+          line-height: 21px;
+          border: 1px solid #eee;
+          border-radius: 5px;
+          font-size: 13px;
+          display: flex;
+          align-items: center;
+
+          img {
+            // float: left;
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+          }
+
+          p {
+            width: calc(100% - 15px);
+          }
+
+        }
+      }
+    }
+  }
+}
+
+///////////////////education////////////////
+.educations_wrap {
+  width: 100%;
+  margin-top: 105px;
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .educations {
+    .each_education {
+      display: flex;
+      align-items: center;
+
+      .education_title {
+        display: flex;
+        align-items: center;
+
+        width: 380px;
+
+        img {
+          width: 25px;
+          height: 25px;
+          float: left;
+        }
+
+        p {
+          font-size: 15px;
+          width: calc(100% - 25px);
+
+          a {}
+        }
+      }
+
+      .academy_link {
+        // float: left;
+        width: 180px;
+        text-decoration: underline;
+
+        p {
+          font-size: 13px;
+
+          a {}
+        }
+      }
+
+      .education_span {
+        width: 150px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+//////////////////////project/////////////////////
+.projects_wrap {
+  margin-top: 115px;
+  overflow: hidden;
+
+  h1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .each_project {
+    float: left;
+    width: 347px;
+    height: auto;
+    font-size: 10px;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {}
+
+    // display: block;
+    .project_image {
+      width: 347px;
+      height: 230px;
+      // border: 1px solid #eee;
+      overflow: hidden;
+      border-bottom: 1px solid #eee;
+      box-sizing: border-box;
+      border-radius: 10px 10px 0 0;
+
+      img {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      // &:hover{scale: 1.3;}
+    }
+
+
+
+    .project_text {
+      padding: 12px 10px 15px 10px;
+      box-sizing: border-box;
+
+      .project_sort {
+        margin-top: 10px;
+
+        h2 {
+          font-size: 14px;
+          float: left;
+          margin-right: 10px;
+        }
+
+        span {
+          line-height: 20px;
+          border: 1px solid #eee;
+          padding: 2px;
+          border-radius: 5px;
+        }
+      }
+
+      .spent_span {
+        font-size: 13px;
+        margin-top: 15px;
+      }
+
+      .skills {
+        margin-top: 10px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+
+        div {
+          // float: left;
+          padding: 2px 4px;
+          margin: 0 8px 0 0;
+          border: 1px solid #eee;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 10x;
+            height: 10px;
+            margin-right: 4px;
+          }
+
+          p {
+            width: calc(100% - 10px);
+          }
+
+        }
+      }
+
+      .link_btn {
+        margin-top: 20px;
+        display: flex;
+
+        div {
+          padding: 5px 20px;
+          // border: 1px solid #eee;
+          border-radius: 5px;
+          text-align: center;
+          font-size: 13px;
+          box-sizing: border-box;
+          transition: 0.4s;
+
+          // 디스플레이 블락했는데 버튼 전체가 클릭되진 얺우ㅡㅁ
+          a {
+            display: block;
+          }
+        }
+
+        .code_btn {
+          border: 3px solid #7ED957;
+
+          &:hover {
+            background-color: #7ED957;
+          }
+        }
+
+        .github_btn {
+          border: 3px solid #FF8BD2;
+
+          &:hover {
+            background-color: #FF8BD2;
+          }
+
+        }
+
+        .site_btn {
+          border: 3px solid #FD8234;
+
+          &:hover {
+            background-color: #FD8234;
+          }
+
+        }
+
+        a {}
+      }
+
+      // .project_sort {
+      //   margin-top: 10px;
+      // }
+    }
+
+  }
+}
+
+
+
+///////////////////////footer///////////////////////
+.footer {
+  margin: 150px 0 130px 0;
+
+  .today {
+    font-size: 15px;
+
+    .today_count {}
+  }
+}
+
+.quick {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+
+  div {
+    width: 50px;
+    height: 50px;
+    // border: 1px solid black;
+    border-radius: 30%;
+    text-align: center;
+    line-height: 50px;
+    background-color: #ddf5df;
+
+    &:hover {
+      font-weight: bold;
+    }
+
+    a {
+      display: block;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 5px;
+    }
+  }
+
+  .contact_btn {
+    a {
+      i {
+        content: "\f086";
+        font-weight: 300;
+        font-family: "Font Awesome 5 Free";
+      }
+    }
+
+    &:hover a i {
+      scale: 1.2;
+    }
+  }
+
+  .top_btn {}
+
+}

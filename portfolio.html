@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - 장현정 포트폴리오</title>
+  <!-- scss 연결-->
+  <link rel="stylesheet" href="./scss/portfolio.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon_color.png" type="image/x-icon">
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+  <!-- modal js 연결 -->
+  <script src="./js/modal.js" defer></script>
+  <script src="./js/common.js" defer></script>
+  <!-- google font cdn -->
+
+</head>
+
+<body class="mode" id="mode">
+  <!-- modal -->
+  <div class="contact_modal" id="contactModal">
+    <div><img src="./images/favicon_color.png" alt="icon">
+      <h1>장현정</h1><i class="far fa-times" id="chatCloseBtn"></i>
+    </div>
+    <div>
+      <p>안녕하세요. 웹 프론트엔드 개발자 장현정입니다. <br />
+        연락주시면 최대한 빨리 답장드리겠습니다.</p>
+    </div>
+    <div>
+      <p>전화번호. 010-2769-8932</p>
+      <p>Email. <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wkdguswjd7@gmail.com"target="_blank">wkdguswjd7@gmail.com</a></p>
+    </div>
+    <button class="chat_btn">
+      채팅으로 연락하기
+    </button>
+  </div>
+  <!--contact_modal-->
+  <div class="search_modal_ex">
+    <div class="search_modal">
+      <div class="search_input">
+        <input type="text" style="font-size: 17px;">
+        <i class="far fa-times" id="searchCloseBtn"></i>
+      </div>
+      <div class="search_result">
+        <div class="search_result_title">
+          <!-- 이렇게 구분해서 코딩했지만 나중에는 제목을 받아오는 형식으로 바꿀 예정! -->
+          <span>장현정</span><span class="bar"></span> <span>Resume(검색결과 예시)</span> </div>
+        <div class="search_result_title"><span>장현정</span><span class="bar"></span> <span>README(예시)</span></div>
+      </div>
+      <div class="search_count">
+        <p>검색 결과 <b class="search_number">2</b>개</p>
+      </div>
+    </div>
+    <!-- search_modal -->
+  </div>
+  <!--search_modal_ex-->
+  <!-- modal -->
+  <header class="header">
+    <div class="logo"><a href="./index.html"> <img src="./images/logo_color.png" alt="logo"></a>
+    </div>
+    <div class="gnb">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./portfolio.html">Portfolio</a></li>
+        <li><a href="./resume.html">Resume</a></li>
+        <li><a href="#!">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="header_right">
+      <div class="search"><a href="#!"> <i class="far fa-search"></i></a></div>
+      <div class="theme"><a href="#!">
+          <svg class="day" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm6.312-10.897c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z">
+            </path>
+          </svg>
+          <svg class="night" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M20.6144 14.6145C19.787 14.8653 18.9093 15.0001 18 15.0001C13.0294 15.0001 9 10.9707 9 6.00013C9 5.09088 9.13484 4.21311 9.3856 3.38574C5.69007 4.50583 3 7.93883 3 12.0001C3 16.9707 7.02944 21.0001 12 21.0001C16.0613 21.0001 19.4943 18.3101 20.6144 14.6145Z">
+            </path>
+          </svg>
+        </a></div>
+    </div>
+  </header>
+  <!-- header -->
+
+  <div class="wrap">
+    <div class="portfolio_introduce">
+      <div class="portfolio_introduce_image"><img src="" alt=""></div>
+      <!--portfolio_introduce_image-->
+      <div class="portfolio_introduce_title">
+        <span>장현정</span><span class="bar">.</span><span>Portfolio</span>
+      </div>
+      <!--portfolio_introduce_title-->
+      <div class="portfolio_introduce_detail">
+        <div class="portfolio_introduce_detatil_text">무슨무슨 개발자, 장현정입니다. <br />
+          어쩌구저쩌구를 뭐를 어쩌면서 어떤 방법으로 공부하고 있습니다.</div>
+        <!--portfolio_introduce_detatil_text-->
+        <div class="portfolio_introduce_detail_personal">
+          <div><img src="./images/favicon_color.png" alt=""><span><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wkdguswjd7@gmail.com" target="_blank">wkdguswjd7@gmail.com</a></span></div>
+          <div><img src="./images/favicon_color.png" alt=""><span><a href="#!">GitHub</a></span></div>
+          <div><img src="./images/favicon_color.png" alt=""><span><a href="#!">Resume</a></span></div>
+          <div><img src="./images/favicon_color.png" alt=""><span><a href="#!">010-2769-8932</a></span></div>
+        </div>
+        <!--portfolio_introduce_detail_personal-->
+      </div>
+      <!--portfolio_introduce_detail-->
+    </div>
+    <!--portfolio_introduce-->
+    <div class="skills_wrap">
+      <h1>기술스택</h1>
+      <div class="skills">
+        <div class="each_category">
+          <div class="skills_categories"><img src="./images/favicon_color.png" alt="">
+            <p>Language</p>
+          </div>
+          <!--skills_categories-->
+          <div class="possessed_skills">
+            <div><img src="./images/icon_javascript.png" alt="">
+              <p>JavaScript</p>
+            </div>
+          </div>
+          <!--skills_
+  possessed-->
+        </div>
+        <!--each_category-->
+        <div class="each_category">
+          <div class="skills_categories"><img src="./images/favicon_color.png" alt="">
+            <p>Framework / Library</p>
+          </div>
+          <!--skills_categories-->
+          <div class="possessed_skills">
+            <div class="skill_box"><img src="./images/icon_react.png" alt="">
+              <p>React</p>
+            </div>
+            <!--skill_box-->
+            <div class="skill_box"><img src="./images/icon_nodejs.png" alt="">
+              <p>Node.js</p>
+            </div>
+            <!--skill_box-->
+          </div>
+          <!--skills_
+  possessed-->
+        </div>
+        <!--each_category-->
+        <div class="each_category">
+          <div class="skills_categories"><img src="./images/favicon_color.png" alt="">
+            <p>MarkUp</p>
+          </div>
+          <!--skills_categories-->
+          <div class="possessed_skills">
+            <div class="skill_box"><img src="./images/icon_html5.png" alt="">
+              <p>HTML5</p>
+            </div>
+            <!--skill_box-->
+            <div class="skill_box"><img src="./images/icon_css3.png" alt="">
+              <p>CSS3</p>
+            </div>
+            <!--skill_box-->
+            <div class="skill_box"><img src="./images/icon_scss.png" alt="">
+              <p>SCSS</p>
+            </div>
+            <!--skill_box-->
+          </div>
+          <!--skills_
+  possessed-->
+        </div>
+        <!--each_category-->
+        <div class="each_category">
+          <div class="skills_categories"><img src="./images/favicon_color.png" alt="">
+            <p>Tool</p>
+          </div>
+          <!--skills_categories-->
+          <div class="possessed_skills">
+            <div class="skill_box"><img src="./images/icon_git.png" alt="">
+              <p>Git</p>
+            </div>
+            <!--skill_box-->
+            <div class="skill_box"><img src="./images/icon_github.png" alt="">
+              <p>GitHub</p>
+            </div>
+            <!--skill_box-->
+            <div class="skill_box"><img src="./images/icon_xd.png" alt="">
+              <p>XD</p>
+            </div>
+            <!--skill_box-->
+            <div class="skill_box"><img src="./images/icon_figma.png" alt="">
+              <p>Figma</p>
+            </div>
+            <!--skill_box-->
+          </div>
+          <!--skills_
+  possessed-->
+        </div>
+        <!--each_category-->
+      </div>
+      <!--skills-->
+    </div>
+    <!--skills_wrap-->
+
+    <div class="educations_wrap">
+      <h1>교육</h1>
+      <div class="educations">
+        <div class="each_education">
+          <div class="education_title">
+            <img src="./images/favicon_color.png" alt="">
+            <p><a href="#!">그린컴퓨터아카데미 프론트엔드개발자 양성과정</a></p>
+          </div>
+          <!--education_title-->
+          <div class="academy_link">
+            <!-- <p><a href="https://busan.greenart.co.kr" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">https://busan.greenart.co.kr</a></p> -->
+            <p><a href="https://busan.greenart.co.kr"
+                target="_blank">https://busan.greenart.co.kr</a></p>
+          </div>
+          <!--academy_link-->
+          <div class="education_span">2022/12/30 - 2023/07/14</div>
+          <!--education_span-->
+        </div>
+        <!--each_education-->
+      </div>
+      <!--education-->
+    </div>
+    <!--education_wrap-->
+
+    <div class="projects_wrap">
+      <h1>프로젝트</h1>
+      <div class="each_project">
+        <div class="project_image">
+          <a href="./project01_ilkwang.html"
+          target="_blank">
+            <img src="./images/project01.png" alt="">
+          </a>
+        </div>
+        <!--project_image-->
+        <div class="project_text">
+          <div class="project_sort">
+            <h2><a href="#!">일광전구</a></h2>
+            <span>팀프로젝트</span>
+          </div>
+          <p class="spent_span">2023/00/00 - 2023/00/00</p>
+          <div class="skills">
+            <div><img src="./images/icon_html5.png" alt="">
+              <p>HTML5</p>
+            </div>
+            <div><img src="./images/icon_css3.png" alt="">
+              <p>CSS3</p>
+            </div>
+            <div><img src="./images/icon_javascript.png" alt="">
+              <p>JavaScript</p>
+            </div>
+            <div><img src="./images/icon_jquery.png" alt="">
+              <p>jQuery</p>
+            </div>
+            <div><img src="./images/icon_xd.png" alt="">
+              <p>XD</p>
+            </div>
+          </div>
+          <!--skills-->
+          <div class="link_btn">
+            <div class="code_btn"><a href="#!">코드보기</a></div>
+            <div class="github_btn"><a href="#!"
+              target="_blank">GitHub</a></div>
+            <div class="site_btn"><a href="#!">일광전구</a></div>
+          </div>
+          <!--link_btn-->
+          <!-- <p class="project_link"><a href="#!">github.com</a></p> -->
+        </div>
+        <!--project_text-->
+
+      </div>
+      <!--each_project-->
+      <div class="each_project">
+        <div class="project_image">
+          <a href="./project02_maison.html"
+          target="_blank">
+            <img src="./images/project02.png" alt="">
+          </a>
+        </div>
+        <!--project_image-->
+        <div class="project_text">
+          <div class="project_sort">
+            <h2><a href="#!">메종키츠네</a></h2>
+            <span>개인프로젝트</span>
+          </div>
+          <p class="spent_span">2023/00/00 - 2023/00/00</p>
+          <div class="skills">
+            <div><img src="./images/icon_html5.png" alt="">
+              <p>HTML5</p>
+            </div>
+            <div><img src="./images/icon_css3.png" alt="">
+              <p>CSS3</p>
+            </div>
+            <div><img src="./images/icon_jquery.png" alt="">
+              <p>jQuery</p>
+            </div>
+            <div><img src="./images/icon_xd.png" alt="">
+              <p>XD</p>
+            </div>
+          </div>
+          <!--skills-->
+          <div class="link_btn">
+            <div class="code_btn"><a href="#!">코드보기</a></div>
+            <div class="github_btn"><a href="#!">GitHub</a></div>
+            <div class="site_btn"><a href="#!">메종키츠네</a></div>
+          </div>
+          <!--link_btn-->
+        </div>
+        <!--project_text-->
+      </div>
+      <!--each_project-->
+    </div>
+    <!--projects_wrap-->
+
+    <footer class="footer">
+      <div class="today">Today <b class="today_count">1</b></div>
+    </footer>
+    <div class="quick">
+      <div class="contact_btn"><a href="#!"><i class="fal fa-comments"></i></div>
+      <div class="top_btn"><a href="#">TOP</a></div>
+    </div>
+    <!--quick-->
+  </div>
+  <!--wrap-->
+</body>
+
+</html>

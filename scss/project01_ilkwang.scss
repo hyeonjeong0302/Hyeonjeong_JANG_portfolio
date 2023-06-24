@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0 auto;
+  font-family: 'Noto Sans KR';
+}
+
+//다크모드
+.dark_mode{
+  background-color: rgb(0, 0, 0);
+  color: #aeaeae;
+  .header{background-color: black; 
+.gnb{ul{
+  li{a{color: #aeaeae;}}
+}}
+.header_right{
+  .search{
+    a{
+      i{
+        color: #aeaeae;
+      }
+    }
+  }
+}
+.theme{a{color: gold;
+.day{display: none;}
+.night{display: block;}}}
+  }
+  .resume_btn, .portfolio_btn {
+    color: #aeaeae;
+  }
+ }
+ 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrap {
+  width: 1400px;
+  margin: 0 auto;
+  // margin-top: 90px;
+
+}
+
+/*
+플러스 아이콘
+<i class="far fa-times"></i>
+ content: "\f00d"; 
+ font-weight: 400;
+ font-family: "Font Awesome 5 Free";
+
+ 채팅 아이콘
+ <i class="fal fa-comments"></i>
+ content: "\f086";
+ font-weight: 300;
+ font-family: "Font Awesome 5 Free";
+ */
+
+//////////////modal////////////////////
+/// //////////////contact/////////////////
+//버튼 누르면 그 위치에 모달창 생기면서 버튼 사라지고 엑스버튼 누르면 다시 버튼 생기게
+.contact_modal {
+  display: none;
+  padding: 15px;
+  position: fixed;
+  z-index: 100;
+  bottom: 105px;
+  right: 0px;
+  width: 373px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+
+  div {
+    margin-bottom: 10px;
+
+  }
+
+  div:nth-child(1) {
+    position: relative;
+
+    img {
+      float: left;
+      width: 30px;
+      height: 30px;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+
+    i {
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      content: "\f00d";
+      font-weight: 700;
+      font-family: "Font Awesome 5 Free";
+      cursor: pointer;
+    }
+  }
+
+  div:nth-child(2) {
+    p {
+      line-height: 28px;
+    }
+  }
+
+  div:nth-child(3) {
+    p {
+      line-height: 35px;
+    }
+  }
+
+  .chat_btn {
+    margin-top: 15px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 2px solid rgb(6, 85, 6);
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+/////////////////search/////////////////////////////////
+/////////////////사이즈 상세 표기 자료 없어서 대략적으로 만들고 다시 만들 예정///////////
+.search_modal_ex {
+  display: none;
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.5);
+
+  .search_modal {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 600px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 7px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-weight: bold;
+
+    .search_input {
+      padding: 20px;
+      border-bottom: 1px solid #000;
+
+      input {
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        content: "\f00d";
+        font-weight: 700;
+        font-family: "Font Awesome 5 Free";
+        cursor: pointer;
+      }
+    }
+
+    .search_result {
+      padding: 10px 20px;
+      border-bottom: 1px solid #000;
+
+      .search_result_title {
+        margin: 5px 0;
+
+        .bar {
+          margin: 0 3px;
+          display: inline-block;
+          width: 2px;
+          height: 15px;
+          background-color: #000;
+        }
+      }
+    }
+
+    .search_count {
+      padding: 10px 20px;
+
+    }
+  }
+}
+
+////////////////////////header////////////////////////
+.header {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 10px 35px rgba(100, 100, 100, 0.05), 0 6px 6px rgba(94, 94, 94, 0.1);
+
+
+  .logo {
+    width: 5%;
+
+    img {
+      width: 77px;
+    }
+  }
+
+  .gnb {
+    width: 90%;
+
+    ul {
+      li {
+        float: left;
+        text-align: center;
+        width: 25%;
+
+        a:hover {
+          color: rgb(6, 85, 6);
+        }
+      }
+    }
+  }
+
+  .header_right {
+    width: 5%;
+
+    div {
+      float: left;
+      width: 50%;
+
+      img {
+        width: 25px;
+      }
+    }
+    .theme{
+      .night{display: none;}
+    }
+  }
+}
+
+///////////////////공통요소 끝//////////////////
+.wrap {
+  margin-top: 155px;
+
+  .project_movie_ex {
+    width: 1400px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    .movie_ex {
+      position: relative;
+      margin-top: 70px;
+      width: 1155px;
+      height: 650px;
+      border: 1px solid black;
+      box-sizing: border-box;
+      float: left;
+      margin-right: 10px;
+
+      .movie {
+        position: absolute;
+        top: 0;
+        left: 0;
+display: none;
+        video {}
+      }
+
+      .main_movie {}
+
+      .sub_movie {}
+
+      .detail_movie {}
+    }
+
+    .movie_btns {
+
+      // float/: left;
+      div {
+        width: 230px;
+        height: 80px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        font-size: 25px;
+        line-height: 80px;
+        text-align: center;
+      }
+
+      .main_btn {}
+
+      .sub_btn {}
+
+      .detail_btn {}
+    }
+  }
+
+  .project_desc_short {
+    margin-left: 0;
+    width: 1155px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #eee;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+
+    p {
+      width: calc(100% - 20px - 5px);
+    }
+  }
+
+  .project_screen_shot {
+    margin-top: 175px;
+    display: flex;
+    flex-wrap: wrap;
+
+    h1 {
+      font-size: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 35px;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    img {
+      width: 460px;
+      height: 260px;
+      margin-right: 10px;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-bottom: 10px;
+      }
+
+      &:nth-child(4),
+      &:nth-child(7) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .planning_background {
+    margin-top: 175px;
+
+    h1 {
+      font-size: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 35px;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  .project_detail {
+    margin-top: 175px;
+
+    h1 {
+      font-size: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 35px;
+      margin-bottom: 30px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      h3 {
+        width: calc(100% - 30px - 5px);
+        font-size: 30px;
+      }
+    }
+
+    ul {
+      margin-top: 50px;
+
+      li {
+        list-style: disc;
+        line-height: 40px;
+      }
+    }
+  }
+
+  .result {
+    margin-top: 175px;
+
+    h1 {
+      font-size: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 35px;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      li:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .dev_span {
+    margin-top: 175px;
+
+    h1 {
+      font-size: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 35px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .members {
+    margin-top: 175px;
+    display: flex;
+    flex-wrap: wrap;
+
+    h1 {
+      width: 100%;
+      font-size: 40px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 35px;
+      margin-bottom: 30px;
+    }
+
+    .member {
+      border: 1px solid #eee;
+      border-radius: 15px;
+      width: 225px;
+      height: 300px;
+      padding: 35px 20px;
+      box-sizing: border-box;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      // &:nth-child(4),
+      // &:nth-child(7) {
+      //   margin-right: 0;
+      // }
+
+      // &:nth-child(1),
+      // &:nth-child(2),
+      // &:nth-child(3) {
+      //   margin-bottom: 25px;
+      // }
+
+      div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        img {
+          width: 40px;
+        }
+
+        h2 {
+          width: calc(100% - 20px - 5px);
+          font-size: 30px;
+        }
+      }
+
+      .roles {
+        display: block;
+        padding: 0 0 0 40px;
+
+        b {
+          font-size: 25px;
+        }
+
+        p {
+          margin-top: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+///////////////////////footer///////////////////////
+.footer {
+  margin: 150px 0 130px 0;
+
+  .today {
+    font-size: 15px;
+
+    .today_count {}
+  }
+}
+
+.quick {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+
+  div {
+    width: 50px;
+    height: 50px;
+    // border: 1px solid black;
+    border-radius: 30%;
+    text-align: center;
+    line-height: 50px;
+    background-color: #ddf5df;
+
+    &:hover {
+      font-weight: bold;
+    }
+
+    a {
+      display: block;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 5px;
+    }
+  }
+
+  .contact_btn {
+    a {
+      i {
+        content: "\f086";
+        font-weight: 300;
+        font-family: "Font Awesome 5 Free";
+      }
+    }
+
+    &:hover a i {
+      scale: 1.2;
+    }
+  }
+
+  .top_btn {}
+
+}
