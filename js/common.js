@@ -37,13 +37,13 @@ themeBtn.addEventListener("click", () => {
 function clicknightMode() {
   localStorage.setItem("theme", "night");
   themeBtn.innerHTML =
-    "<img src='../images/night_mode.png'>";
+    "<img src='./images/night_mode.png'>";
   document.documentElement.setAttribute("data-theme", "night");
   status = true;
 }
 function clickdayMode() {
   localStorage.setItem("theme", "day");
-  themeBtn.innerHTML = "<img src='../images/day_mode.png'>";
+  themeBtn.innerHTML = "<img src='./images/day_mode.png'>";
   document.documentElement.setAttribute("data-theme", "day");
   status = false;
 }
