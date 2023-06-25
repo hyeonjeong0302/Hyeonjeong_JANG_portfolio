@@ -7,11 +7,36 @@ font-family: 'Noto Sans KR', sans-serif;
 font-family: 'Noto Sans TC', sans-serif;
 */
 
+/*
+노토산스 한글
+font-family: 'Noto Sans KR', sans-serif;
+노토산스 한자
+font-family: 'Noto Sans TC', sans-serif;
+*/
+
 * {
   margin: 0 auto;
   font-family: 'Noto Sans KR';
 }
 
+:root[data-theme='night'] {
+--background-color: rgb(0, 0, 0);
+--button-color: gold;
+--text-color: #aeaeae;
+}
+
+:root[data-theme='day'] {
+--background-color: #fff;
+--button-color: orange;
+--text-color: #000;
+}
+
+body{
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/*
 //다크모드
 .dark_mode {
   background-color: rgb(0, 0, 0);
@@ -60,7 +85,8 @@ font-family: 'Noto Sans TC', sans-serif;
     color: #aeaeae;
   }
 }
- 
+*/
+
 li {
   list-style: none;
 }
@@ -74,7 +100,6 @@ a {
   width: 710px;
   margin: 0 auto;
   // margin-top: 90px;
-
 }
 
 /*
@@ -89,6 +114,12 @@ a {
  content: "\f086";
  font-weight: 300;
  font-family: "Font Awesome 5 Free";
+
+ 검색 아이콘
+ <i class="far fa-search"></i>
+ content: "\f002";
+ font-weight: 400;
+font-family: "Font Awesome 5 Free";
  */
 
 //////////////modal////////////////////
@@ -191,6 +222,7 @@ a {
     font-weight: bold;
 
     .search_input {
+      position: relative;
       padding: 20px;
       border-bottom: 1px solid #000;
 
@@ -220,13 +252,17 @@ a {
       .search_result_title {
         margin: 5px 0;
 
-        .bar {
-          margin: 0 3px;
-          display: inline-block;
-          width: 2px;
-          height: 15px;
-          background-color: #000;
-        }
+       
+     .bar {
+      display: inline-block;
+      width: 6px;
+      height: 40px;
+      line-height: 40px;
+      background-color: var(--text-color);
+      margin: 0 10px;
+      border-radius: 7px;
+      color: rgb(0, 0, 0, 0);
+    }
       }
     }
 
@@ -236,7 +272,6 @@ a {
     }
   }
 }
-
 /////////////////////header////////////
 .header {
   margin: 0 auto;
@@ -248,7 +283,7 @@ a {
   box-sizing: border-box;
   position: fixed;
   top: 0px;
-  background-color: #fff;
+  background-color: var(--background-color);
   border-bottom: 1px solid #eee;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
   .logo {
@@ -264,6 +299,9 @@ a {
       float: left;
       text-align: center;
       width: 25%;
+      a{
+        color: var(--text-color);
+      }
     }
    ul li a:hover {
       color: rgb(6, 85, 6);
@@ -282,14 +320,17 @@ a {
          content: "\f002";
          font-weight: 900;
          font-family: "Font Awesome 5 Free";
+         color: var(--text-color);
        }
     }
-   .theme{ 
+   .theme_btn{ 
     a{
-color: orange
-    };.night {
+color: var(--button-color);
+    }
+    .night {
     display: none;
-  }}
+  }
+}
   }
 }
 ///////////////////공통요소 끝//////////////////
@@ -302,10 +343,10 @@ color: orange
     margin-left: 0px;
     width: 125px;
     height: 125px;
-    border: 1px solid black;
 
     img {
       width: 100%;
+         border-radius: 50%;
     }
   }
 
@@ -316,12 +357,12 @@ color: orange
       font-size: 40px;
     }
 
-    .bar {
+     .bar {
       display: inline-block;
       width: 6px;
       height: 40px;
       line-height: 40px;
-      background-color: black;
+      background-color: var(--text-color);
       margin: 0 10px;
       border-radius: 7px;
       color: rgb(0, 0, 0, 0);
@@ -365,6 +406,9 @@ color: orange
 
         span {
           width: calc(100% - 20px);
+          a{
+            color: var(--text-color);
+          }
         }
       }
     }
@@ -466,7 +510,7 @@ color: orange
           font-size: 15px;
           width: calc(100% - 25px);
 
-          a {}
+          a { color: var(--text-color);}
         }
       }
 
@@ -478,7 +522,9 @@ color: orange
         p {
           font-size: 13px;
 
-          a {}
+          a {
+             color: var(--text-color);
+          }
         }
       }
 
@@ -547,6 +593,7 @@ color: orange
           font-size: 14px;
           float: left;
           margin-right: 10px;
+          a{ color: var(--text-color);}
         }
 
         span {
@@ -606,6 +653,7 @@ color: orange
           // 디스플레이 블락했는데 버튼 전체가 클릭되진 얺우ㅡㅁ
           a {
             display: block;
+        color: var(--text-color);
           }
         }
 

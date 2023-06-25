@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        :root[data-theme='dark'] {
+        :root[data-theme='night'] {
     --background-color: rgb(68 64 60);
     --card-color: rgb(28 25 23);
     --text-color: rgb(245 245 244);
 }
 
-:root[data-theme='light'] {
+:root[data-theme='day'] {
     --background-color: rgb(255 237 213);
     --card-color: #fff;
     --text-color: rgb(68 64 60);
@@ -58,46 +58,46 @@ h2, p {
 <body>
 <div class="background">
     <div class="relative">
-        <button>Dark</button>
+        <button class="theme_btn">night</button>
         <h2 class="">Lorem ipsum</h2>
         <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda optio quasi architecto iusto vel
             nostrum a dicta veniam quos distinctio.</p>
     </div>
 </div>
 <script>
-    const button = document.querySelector('button')
+    const themeBtn = document.querySelector('.theme_btn')
         const userTheme = localStorage.getItem('theme')
         let status = false
 
         // 처음 이용객의 테마를 읽음
         document.addEventListener('DOMContentLoaded', () => {
-            if (userTheme === 'dark') {
-                clickDarkMode()
-            } else if (userTheme === 'light') {
-                clickLightMode()
+            if (userTheme === 'night') {
+                clicknightMode()
+            } else if (userTheme === 'day') {
+                clickdayMode()
             }
         })
 
         // 버튼클릭
-        button.addEventListener('click', () => {
+        themeBtn.addEventListener('click', () => {
             if (status === false) {
-                clickDarkMode()
+                clicknightMode()
             } else if (status === true) {
-                clickLightMode()
+                clickdayMode()
             }
         })
 
         // 다크/라이트 전환이벤트
-        function clickDarkMode() {
-            localStorage.setItem("theme", "dark")
-            button.innerText = 'Light'
-            document.documentElement.setAttribute('data-theme', 'dark')
+        function clicknightMode() {
+            localStorage.setItem("theme", "night")
+            themeBtn.innerText = 'day'
+            document.documentElement.setAttribute('data-theme', 'night')
             status = true
         }
-        function clickLightMode() {
-            localStorage.setItem("theme", "light")
-            button.innerText = 'Dark'
-            document.documentElement.setAttribute('data-theme', 'light')
+        function clickdayMode() {
+            localStorage.setItem("theme", "day")
+            themeBtn.innerText = 'night'
+            document.documentElement.setAttribute('data-theme', 'day')
             status = false
         }
 </script>
