@@ -1,5 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 
+/*
+노토산스 한글
+font-family: 'Noto Sans KR', sans-serif;
+노토산스 한자
+font-family: 'Noto Sans TC', sans-serif;
+*/
+
+/*
+노토산스 한글
+font-family: 'Noto Sans KR', sans-serif;
+노토산스 한자
+font-family: 'Noto Sans TC', sans-serif;
+*/
 * {
   margin: 0 auto;
   font-family: 'Noto Sans KR';
@@ -359,7 +372,7 @@ color: orange
   
     .btn_ex_wrap {
       overflow: hidden;
-  
+ 
       .btn_ex {
         margin: 25px 0 50px 0;
         width: 346px;
@@ -376,14 +389,14 @@ color: orange
             font-size: 50px;
             text-align: center;
             line-height: 197px;
-  
+  z-index: -1;
             img {
               position: absolute;
               width: 50px;
               height: 50px;
   
               &:nth-child(1) {
-                right: 45px;
+                right: 37px;
                 top: 50px;
                 rotate: 27deg;
               }
@@ -414,6 +427,7 @@ color: orange
             font-size: 50px;
             text-align: center;
             line-height: 197px;
+  z-index: -1;
   
             img {
               position: absolute;

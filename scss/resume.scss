@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+/*
+노토산스 한글
+font-family: 'Noto Sans KR', sans-serif;
+노토산스 한자
+font-family: 'Noto Sans TC', sans-serif;
+*/
 
 * {
   margin: 0 auto;
@@ -306,7 +313,7 @@ color: orange
         border-radius: 50%;
         box-sizing: border-box;
         margin-right: 45px;
-
+overflow: hidden;
         img {
           width: 100%;
         }
@@ -366,7 +373,9 @@ color: orange
 
     p {
       margin-top: 50px;
-      line-height: 25px;
+      line-height: 27px;
+      b{display: block;
+      margin: 12px 0 5px 0;}
     }
   }
 
@@ -428,7 +437,7 @@ color: orange
         margin-top: 50px;
 
         h2 {
-          font-size: 19px;
+          font-size: 19px;margin-bottom: 20px;
         }
 
         .project_desc {
@@ -510,6 +519,7 @@ color: orange
           }
         }
       }
+      .used_skills{border-bottom: 2px solid #707070;}
     }
   }
 
@@ -561,6 +571,8 @@ color: orange
         font-weight: 600;
         font-size: 20px;
         margin-bottom: 10px;
+            position: static;
+    z-index: -1;
       }
 
       .progress_bar .progress {
